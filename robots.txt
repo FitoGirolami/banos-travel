@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
-Sitemap: https://banos.travel/sitemap.xml
+Sitemap: https://www.banos.travel/sitemap.xml
