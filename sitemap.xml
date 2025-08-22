@@ -12,5 +12,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Si luego agregas más secciones (ej: /guia/, /faq/), añádelas aquí -->
+  <url>
+    <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
