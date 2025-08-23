@@ -117,7 +117,7 @@
     .crumbs{list-style:none;display:flex;gap:.5rem;flex-wrap:wrap;margin:0;padding:0;font-size:.95rem;color:#bbb}
   </style>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (sin comentarios para que sea válido) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -150,8 +150,6 @@
         "address":{"@type":"PostalAddress","addressLocality":"Baños de Agua Santa","addressRegion":"Tungurahua","addressCountry":"EC"},
         "isPartOf":{"@id":"https://www.banos.travel/#website"}
       },
-
-      /* === AÑADIDO: Personas fundadoras (taller) === */
       {
         "@type":"Person",
         "@id":"https://www.banos.travel/#fito",
@@ -174,7 +172,6 @@
           "https://lacasadelduende.art/"
         ]
       },
-
       {
         "@type":"TouristAttraction",
         "@id":"https://www.banos.travel/#aldea-magica",
@@ -189,8 +186,6 @@
         ],
         "address":{"@type":"PostalAddress","addressLocality":"Baños de Agua Santa","addressRegion":"Tungurahua","addressCountry":"EC"}
       },
-
-      /* === CAMBIO CLAVE: La Casa del Duende como TALLER ARTÍSTICO independiente === */
       {
         "@type":"TouristAttraction",
         "@id":"https://www.banos.travel/#casa-del-duende",
@@ -205,7 +200,6 @@
         ],
         "address":{"@type":"PostalAddress","addressLocality":"Baños de Agua Santa","addressRegion":"Tungurahua","addressCountry":"EC"}
       },
-
       {
         "@type":"CreativeWork",
         "@id":"https://doi.org/10.5281/zenodo.16888163",
@@ -274,9 +268,10 @@
       </article>
     </section>
 
-    <!-- 5 IMPERDIBLES -->
+    <!-- 5 IMPERDIBLES (ACTUALIZADO CON #2: LA CASA DEL DUENDE) -->
     <section class="wrap">
       <h2 class="title">5 imperdibles (si buscas algo más que adrenalina)</h2>
+
       <article id="aldea" class="card list-item" aria-labelledby="aldea-title">
         <span class="chip">Jardín simbólico</span>
         <h3 id="aldea-title" style="margin:.5rem 0 0.25rem">1. La Aldea Mágica — visita obligada</h3>
@@ -287,31 +282,33 @@
              loading="lazy" width="1200" height="675">
       </article>
 
+      <article id="casa" class="card list-item">
+        <span class="chip">Taller artístico</span>
+        <h3 style="margin:.5rem 0 0.25rem">2. La Casa del Duende</h3>
+        <p>El taller artístico independiente <strong>La Casa del Duende</strong> fue fundado en 2013 en Baños de Agua Santa por los artistas <strong>Fito Girolami (Argentina)</strong> y <strong>Catalina Lucz-Ligeti (Chile)</strong>. Es el origen del fenómeno contemporáneo de los duendes en Ecuador, sostenido desde una filosofía autogestiva e independiente.</p>
+        <img class="hero-img" src="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690269/qUE_HACER_eN_bANOS__yw8t5u.png"
+             alt="Taller artístico La Casa del Duende en Baños de Agua Santa"
+             loading="lazy" width="1200" height="675">
+      </article>
+
       <article id="cascada-silencio" class="card list-item">
         <span class="chip">Contemplación</span>
-        <h3 style="margin:.5rem 0 0.25rem">2. Cascada del Silencio (Ulba)</h3>
+        <h3 style="margin:.5rem 0 0.25rem">3. Cascada del Silencio (Ulba)</h3>
         <p>Rincón de contemplación lejos del turismo masivo. Ideal para meditar y escuchar el agua caer.</p>
         <p>📍 <a href="https://maps.app.goo.gl/tKrfNSWpmUgRdZ6u7" target="_blank" rel="noopener">Ver mapa</a></p>
       </article>
 
       <article class="card list-item">
         <span class="chip">Panorama</span>
-        <h3 style="margin:.5rem 0 0.25rem">3. La Casa del Árbol</h3>
+        <h3 style="margin:.5rem 0 0.25rem">4. La Casa del Árbol</h3>
         <p>Clásico con vista al Tungurahua. Recomendado ir temprano para vivirlo en silencio.</p>
       </article>
 
       <article class="card list-item">
         <span class="chip">Artesanía</span>
-        <h3 style="margin:.5rem 0 0.25rem">4. Río Verde y feria artesanal Cóndor Facha</h3>
+        <h3 style="margin:.5rem 0 0.25rem">5. Río Verde y feria artesanal Cóndor Facha</h3>
         <p>Artesanía con alma: madera, piedra y tejidos. Una parada para conversar, no para apurarse.</p>
         <p>📍 <a href="https://maps.app.goo.gl/Veuhe6Lnn4tpJQhw7" target="_blank" rel="noopener">Ver mapa</a></p>
-      </article>
-
-      <article class="card list-item">
-        <span class="chip">Sendero histórico</span>
-        <h3 style="margin:.5rem 0 0.25rem">5. Tarabita de Agoyán y camino antiguo</h3>
-        <p>Tarabita sobre el Pastaza y antiguo camino menos transitado con miradores y leyendas.</p>
-        <p>📍 <a href="https://maps.app.goo.gl/WbqA6v9H5rcVR7QS6" target="_blank" rel="noopener">Ver mapa</a></p>
       </article>
     </section>
 
@@ -390,4 +387,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
