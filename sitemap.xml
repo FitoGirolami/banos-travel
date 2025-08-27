@@ -3,7 +3,7 @@
   <!-- Home -->
   <url>
     <loc>https://www.banos.travel/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,9 +11,25 @@
   <!-- Página sobre el origen de los duendes -->
   <url>
     <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
-    <lastmod>2025-08-21</lastmod>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+
+  <!-- Historias de los duendes (NUEVA) -->
+  <url>
+    <loc>https://www.banos.travel/historias-duendes-banos-ecuador.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Qué hacer en Baños (NUEVA) -->
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-ecuador.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <!-- Ejemplo de futuras páginas independientes -->
