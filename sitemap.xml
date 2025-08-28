@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
   <!-- Home -->
   <url>
     <loc>https://www.banos.travel/</loc>
@@ -8,35 +12,49 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Página sobre el origen de los duendes -->
+  <!-- Origen de los duendes -->
   <url>
     <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.banos.travel/static/og/origen-duendes.jpg</image:loc>
+      <image:title>Origen de los duendes en Baños</image:title>
+    </image:image>
   </url>
 
-  <!-- Historias de los duendes (NUEVA) -->
+  <!-- Historias de los duendes -->
   <url>
     <loc>https://www.banos.travel/historias-duendes-banos-ecuador.html</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.banos.travel/assets/hero-casa-del-duende.jpg</image:loc>
+      <image:title>Historias de los duendes en Baños</image:title>
+    </image:image>
   </url>
 
-  <!-- Qué hacer en Baños (NUEVA) -->
+  <!-- Qué hacer en Baños -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-ecuador.html</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://www.banos.travel/static/og/que-hacer-banos.jpg</image:loc>
+      <image:title>Qué hacer en Baños</image:title>
+    </image:image>
   </url>
 
-  <!-- Ejemplo de futuras páginas independientes -->
+  <!-- Historia cultural -->
   <url>
     <loc>https://www.banos.travel/historia-cultural.html</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
+
 </urlset>
+
