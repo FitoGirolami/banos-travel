@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Baños Turismo y Leyendas | Experiencias culturales y tradición inventada</title>
+  <meta name="description" content="Análisis crítico del turismo en Baños de Agua Santa: evolución histórica, leyendas inventadas y autenticidad cultural. Con DOI en Zenodo.">
+  <meta name="keywords" content="Baños de Agua Santa, turismo cultural, duendes, tradición inventada, folklore andino, Ecuador, La Casa del Duende, experiencias culturales">
+  <link rel="canonical" href="https://banos.travel/turismo-leyendas-experiencias">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Baños: Turismo, Leyendas y Experiencias">
+  <meta property="og:description" content="Entre tradición inventada y autenticidad cultural. Documento con DOI en Zenodo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://banos.travel/turismo-leyendas-experiencias">
+  <meta property="og:image" content="https://drive.google.com/file/d/1t_9XT2k82k2ZUnIm2fUn-KP4ArG-QZN8/view">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Baños: Turismo, Leyendas y Experiencias">
+  <meta name="twitter:description" content="Análisis crítico del turismo cultural en Baños de Agua Santa.">
+  <meta name="twitter:image" content="https://banos.travel/images/turismo-leyendas-experiencias.png">
+</head>
+<body>
+
+  <article>
+    <header>
+      <h1>Baños: Turismo, Leyendas y Experiencias</h1>
+      <h2>Entre tradición inventada y autenticidad cultural</h2>
+    </header>
+
+    <section>
+      <p>
+        Este artículo analiza la evolución turística de Baños de Agua Santa, desde el termalismo y el turismo religioso hasta la actual economía de experiencias. 
+        Se estudia el papel de las leyendas y tradiciones inventadas, en particular la figura de los duendes, contrastadas con el folclore auténtico andino. 
+        Publicado originalmente en el <em>Archivo de Defensa Cultural Independiente</em> y con DOI en Zenodo, forma parte de un esfuerzo por documentar críticamente el turismo cultural en Ecuador.
+      </p>
+
+      <p>
+        👉 <a href="https://zenodo.org/records/17245605" target="_blank" rel="noopener">Leer el artículo completo en Zenodo</a>
+      </p>
+    </section>
+
+    <section>
+      <h3>Cómo citar este artículo</h3>
+      <blockquote>
+        Girolami, F., & Lucz-Ligeti, C. (2025). <em>Baños: Turismo, Leyendas y Experiencias. Entre tradición inventada y autenticidad cultural</em>. 
+        Observatorio Andino de Cultura y Memoria Simbólica. Zenodo. 
+        <a href="https://doi.org/10.5281/zenodo.17245605" target="_blank">https://doi.org/10.5281/zenodo.17245605</a>
+      </blockquote>
+    </section>
+
+    <footer>
+      <p><small>Licencia: CC BY-NC-ND 4.0</small></p>
+    </footer>
+  </article>
+
+</body>
+</html>
