@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Duende en Baños: ¿Mito o Marketing?</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F3F4F6;
+            color: #1F2937;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #4A148C, #FF4081);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #00BFA5;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <header class="bg-white shadow-md relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#4A148C] via-[#00BFA5] to-[#FF4081]"></div>
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tight text-[#4A148C]">
+                El 'Duende' en Baños
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-6 text-gray-600">
+                Tradición Ancestral <span class="font-bold text-[#FF4081]">vs.</span> Creación Moderna
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed">
+                Una investigación sobre cómo una obra artística contemporánea transformó la identidad turística de una ciudad, reescribiendo la historia local en menos de una década.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 space-y-16">
+
+        <!-- Section 1: Introduction & Context -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-l-8 border-[#4A148C] card-hover">
+                <h3 class="text-2xl font-bold mb-4 text-[#4A148C]">La Incógnita Cultural</h3>
+                <p class="mb-4 text-gray-600 text-justify">
+                    Ecuador posee un rico folclore donde el "duende" es tradicionalmente un ser temido, travieso y oculto. Sin embargo, en la última década, Baños de Agua Santa se ha autoproclamado la "Ciudad de los Duendes", presentando figuras amigables y coloridas como patrimonio ancestral.
+                </p>
+                <p class="text-gray-600 text-justify">
+                    ¿Qué tan arraigado está realmente este concepto? Las evidencias sugieren que estamos ante un caso de <strong>"invención de tradición"</strong>, donde un producto comercial reciente ha sido adoptado como leyenda milenaria.
+                </p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="flex flex-col items-center justify-center h-full space-y-4">
+                    <div class="text-center">
+                        <span class="text-5xl font-black text-[#00BFA5]">2013</span>
+                        <p class="text-sm uppercase tracking-wide text-gray-500 mt-2">Año de Aparición del Fenómeno</p>
+                    </div>
+                    <div class="w-full h-px bg-gray-200"></div>
+                    <div class="text-center">
+                        <span class="text-5xl font-black text-[#FF4081]">$15+</span>
+                        <p class="text-sm uppercase tracking-wide text-gray-500 mt-2">Costo Promedio de la "Tradición"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Regional Context Data -->
+        <section>
+            <div class="mb-8 border-b pb-4 border-gray-200">
+                <h3 class="text-3xl font-bold text-gray-800">1. El Mapa del Miedo Tradicional</h3>
+                <p class="mt-2 text-gray-600 max-w-3xl">
+                    Antes del boom turístico de Baños, el término "duende" tenía significados muy específicos y arraigados en otras regiones del Ecuador. En Baños, las menciones eran marginales y carecían de un ciclo de leyendas propio.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Text Content -->
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-blue-500">
+                        <h4 class="font-bold text-lg text-blue-800">Costa (Manabí/Esmeraldas)</h4>
+                        <p class="text-sm text-gray-600">Hogar del <strong>Tintín</strong> (fecundador) y el <strong>Riviel</strong>. Seres temidos vinculados a la sexualidad y el peligro nocturno.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-red-500">
+                        <h4 class="font-bold text-lg text-red-800">Sierra Norte (Carchi)</h4>
+                        <p class="text-sm text-gray-600">Duendes "melódicos" y enamoradizos que seducen cerca de cascadas. Requieren rituales de protección (ajos, cuerdas).</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-gray-400">
+                        <h4 class="font-bold text-lg text-gray-800">Baños (Pre-2013)</h4>
+                        <p class="text-sm text-gray-600">Ausencia notable en archivos históricos. Relatos dispersos sobre "brujas" o el "Supay" (diablo), pero no duendes gnomos.</p>
+                    </div>
+                </div>
+
+                <!-- Visualization -->
+                <div class="bg-white p-4 rounded-xl shadow-lg">
+                    <h4 class="text-center font-bold text-gray-700 mb-4">Relevancia Folclórica Histórica (Pre-2013)</h4>
+                    <div class="chart-container">
+                        <canvas id="regionalChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-2">Fuente: Análisis de registros culturales y prensa local.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Timeline of Creation -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 overflow-hidden relative">
+            <h3 class="text-3xl font-bold text-center mb-12 text-[#4A148C]">2. Cronología de una "Tradición"</h3>
+            
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform md:-translate-x-1/2"></div>
+
+                <!-- Item 1 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center w-full">
+                    <div class="w-full md:w-5/12 md:pr-8 order-2 md:order-1 text-left md:text-right pl-12 md:pl-0">
+                        <h4 class="text-xl font-bold text-[#4A148C]">2013: El Origen Artístico</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            Fito Girolami y Catalina Lucz-Ligeti fundan "La Casa del Duende". Su visión era <strong>filosófica y artística</strong>, buscando representar "lo invisible" y el silencio, sin relación con leyendas locales.
+                        </p>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 w-8 h-8 bg-[#4A148C] rounded-full border-4 border-white transform -translate-x-1/2 z-10 flex items-center justify-center text-white text-xs font-bold order-1">1</div>
+                    <div class="w-full md:w-5/12 md:pl-8 order-3"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center w-full">
+                    <div class="w-full md:w-5/12 md:pr-8 order-2 md:order-1"></div>
+                    <div class="absolute left-4 md:left-1/2 w-8 h-8 bg-[#00BFA5] rounded-full border-4 border-white transform -translate-x-1/2 z-10 flex items-center justify-center text-white text-xs font-bold order-1">2</div>
+                    <div class="w-full md:w-5/12 md:pl-8 order-3 text-left pl-12 md:pl-0">
+                        <h4 class="text-xl font-bold text-[#00BFA5]">2018: La Aldea Mágica</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            Expansión comercial con un parque temático. El éxito visual atrae la atención de otros empresarios locales que ven potencial económico en la estética.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center w-full">
+                    <div class="w-full md:w-5/12 md:pr-8 order-2 md:order-1 text-left md:text-right pl-12 md:pl-0">
+                        <h4 class="text-xl font-bold text-[#FF4081]">2020-2022: Boom Post-Pandemia</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            Explosión de "Senderos de Duendes" y miradores. El concepto se simplifica: de arte contemplativo a <strong>decoración para selfies</strong> (Instagramización).
+                        </p>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 w-8 h-8 bg-[#FF4081] rounded-full border-4 border-white transform -translate-x-1/2 z-10 flex items-center justify-center text-white text-xs font-bold order-1">3</div>
+                    <div class="w-full md:w-5/12 md:pl-8 order-3"></div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex flex-col md:flex-row items-center w-full">
+                    <div class="w-full md:w-5/12 md:pr-8 order-2 md:order-1"></div>
+                    <div class="absolute left-4 md:left-1/2 w-8 h-8 bg-gray-800 rounded-full border-4 border-white transform -translate-x-1/2 z-10 flex items-center justify-center text-white text-xs font-bold order-1">4</div>
+                    <div class="w-full md:w-5/12 md:pl-8 order-3 text-left pl-12 md:pl-0">
+                        <h4 class="text-xl font-bold text-gray-800">Actualidad: Institucionalización</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            El gobierno local promueve "leyendas" en su web oficial, mezclando mitología celta y local para validar el producto turístico como patrimonio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Comparative Analysis -->
+        <section>
+            <div class="mb-8 text-center">
+                <h3 class="text-3xl font-bold text-gray-800">3. ¿Qué estamos viendo realmente?</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-2">
+                    La disonancia entre el ser mitológico ecuatoriano y el producto turístico de Baños es radical. El siguiente gráfico compara sus atributos fundamentales.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-500">
+                    <h4 class="font-bold text-xl mb-2 text-gray-700">El Duende Tradicional</h4>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li class="flex items-start"><span class="mr-2">👹</span> <strong>Apariencia:</strong> Deforme, pies al revés, aterrador.</li>
+                        <li class="flex items-start"><span class="mr-2">⚠️</span> <strong>Carácter:</strong> Maligno, burlón, acosador sexual (Tintín).</li>
+                        <li class="flex items-start"><span class="mr-2">🛡️</span> <strong>Reacción:</strong> Miedo, uso de amuletos y rezos.</li>
+                    </ul>
+                </div>
+
+                <!-- Visualization Center -->
+                <div class="lg:col-span-1 bg-white p-2 rounded-xl shadow-lg flex items-center justify-center">
+                    <div class="chart-container" style="height: 300px; width: 100%;">
+                        <canvas id="radarCompare"></canvas>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#FF4081]">
+                    <h4 class="font-bold text-xl mb-2 text-[#FF4081]">El Duende de Baños</h4>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li class="flex items-start"><span class="mr-2">🎅</span> <strong>Apariencia:</strong> Gnomo de jardín, colorido, simpático.</li>
+                        <li class="flex items-start"><span class="mr-2">✨</span> <strong>Carácter:</strong> Mágico, guardián de la naturaleza, trae suerte.</li>
+                        <li class="flex items-start"><span class="mr-2">📸</span> <strong>Reacción:</strong> Consumo, selfies, compra de souvenirs.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Funnel of Invention (Plotly) -->
+        <section class="bg-[#4A148C] text-white rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h3 class="text-3xl font-bold text-center mb-4">4. La Fabricación del Mito</h3>
+            <p class="text-center text-blue-100 max-w-3xl mx-auto mb-8">
+                El proceso mediante el cual una creación artística reciente se convierte en "verdad histórica" sigue un patrón de apropiación y validación institucional.
+            </p>
+
+            <div class="bg-white rounded-xl p-4 text-gray-900 shadow-inner">
+                <div id="funnelChart" style="width:100%; height:400px;"></div>
+                <div class="mt-4 text-sm text-gray-500 text-center italic">
+                    *El modelo muestra cómo la narrativa oficial absorbe la creación artística y la reempaqueta como tradición.*
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contradictions in Official Discourse -->
+        <section>
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 border-l-8 border-[#FF4081] pl-4">5. Análisis del Discurso Oficial</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h4 class="font-bold text-lg mb-4 text-[#FF4081]">Inconsistencias Detectadas</h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        El artículo oficial "Duendes Mágicos" de Tungurahua Turismo intenta validar el fenómeno mediante la mezcla de datos inconexos:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-xs font-bold mt-1">X</div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Mezcla Cultural</p>
+                                <p class="text-xs text-gray-500">Cita mitología irlandesa (Leprechauns) y nombres árabes (Djinns) como si fueran parte de la tradición andina.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-xs font-bold mt-1">X</div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Geografía Confusa</p>
+                                <p class="text-xs text-gray-500">Atribuye leyendas de Manabí y Carchi a Baños sin evidencia histórica local.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center text-xs font-bold mt-1">X</div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Validación Circular</p>
+                                <p class="text-xs text-gray-500">Admite que los duendes "están a la venta", revelando el fin comercial detrás de la leyenda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization showing the contrast -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center">
+                    <h4 class="font-bold text-gray-700 mb-4 text-center">Realidad vs. Narrativa Turística</h4>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="discourseChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="bg-gray-800 text-gray-300 rounded-t-3xl p-8 md:p-12 mt-12 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Conclusión</h2>
+            <p class="max-w-3xl mx-auto leading-relaxed mb-6">
+                La figura del duende en Baños de Agua Santa es un ejemplo paradigmático de <strong>invención de tradición en tiempo real</strong>. Si bien ha generado dinamismo económico e identidad visual, se ha construido sobre el "borrado" de la intención artística original y la distorsión del verdadero folclore ecuatoriano. Lo que hoy se vende como ancestral es, en realidad, una exitosa estrategia de marketing nacida en 2013.
+            </p>
+            <div class="flex justify-center space-x-4 text-sm font-mono text-gray-500">
+                <span>Fuente: Investigación Cultural</span>
+                <span>•</span>
+                <span>Análisis de Prensa & Archivos</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- UTILITY FUNCTIONS ---
+        
+        // Function to wrap long labels for Chart.js
+        function wrapLabels(label, maxLength = 16) {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= maxLength) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Shared Tooltip Config
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART GENERATION ---
+
+        // 1. Regional Relevance Chart (Horizontal Bar)
+        const ctxRegional = document.getElementById('regionalChart').getContext('2d');
+        const regionalLabels = ["Manabí (Tintín)", "Carchi (Melódico)", "Sierra (Chuzalongo)", "Baños (Pre-2013)"];
+        const wrappedRegionalLabels = regionalLabels.map(l => wrapLabels(l));
+
+        new Chart(ctxRegional, {
+            type: 'bar',
+            data: {
+                labels: wrappedRegionalLabels,
+                datasets: [{
+                    label: 'Intensidad Folclórica Documentada (0-10)',
+                    data: [9, 7, 8, 1],
+                    backgroundColor: [
+                        'rgba(74, 20, 140, 0.6)', // Deep Purple
+                        'rgba(74, 20, 140, 0.6)',
+                        'rgba(74, 20, 140, 0.6)',
+                        'rgba(156, 163, 175, 0.4)' // Grey for Baños
+                    ],
+                    borderColor: [
+                        'rgba(74, 20, 140, 1)',
+                        'rgba(74, 20, 140, 1)',
+                        'rgba(74, 20, 140, 1)',
+                        'rgba(156, 163, 175, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Nivel de Presencia en Relatos Orales' }
+                    }
+                }
+            }
+        });
+
+        // 2. Radar Comparison Chart
+        const ctxRadar = document.getElementById('radarCompare').getContext('2d');
+        const radarLabels = ["Antigüedad Real", "Factor Miedo", "Valor Comercial", "Estética 'Cute'", "Apoyo Institucional"];
+        const wrappedRadarLabels = radarLabels.map(l => wrapLabels(l));
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: wrappedRadarLabels,
+                datasets: [{
+                    label: 'Folclore Tradicional',
+                    data: [10, 9, 2, 1, 2],
+                    fill: true,
+                    backgroundColor: 'rgba(75, 85, 99, 0.2)', // Gray
+                    borderColor: 'rgb(75, 85, 99)',
+                    pointBackgroundColor: 'rgb(75, 85, 99)',
+                }, {
+                    label: 'Duende Moderno (Baños)',
+                    data: [1, 1, 10, 9, 10],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 64, 129, 0.2)', // Pink
+                    borderColor: 'rgb(255, 64, 129)',
+                    pointBackgroundColor: 'rgb(255, 64, 129)',
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    r: {
+                        angleLines: { display: true },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                }
+            }
+        });
+
+        // 3. Funnel Chart (Plotly)
+        // Using plot_bgcolor and paper_bgcolor to match aesthetics
+        const funnelData = [{
+            type: 'funnel',
+            y: ["Concepto Artístico", "Atracción Privada", "Apropiación Popular", "Narrativa Oficial"],
+            x: [100, 80, 60, 40],
+            textinfo: "text+value", 
+            text: ["Filosofía Invisible (2013)", "La Aldea Mágica (2018)", "Copia y Venta Masiva", "Turismo Tungurahua"],
+            marker: {
+                color: ["#4A148C", "#7B1FA2", "#FF4081", "#00BFA5"]
+            }
+        }];
+
+        const funnelLayout = {
+            margin: { l: 150, r: 20, t: 20, b: 20 }, // Large left margin for labels
+            funnelmode: "stack",
+            showlegend: false,
+            plot_bgcolor: "rgba(0,0,0,0)",
+            paper_bgcolor: "rgba(0,0,0,0)",
+            font: { family: 'Roboto, sans-serif' }
+        };
+        
+        // Ensure Plotly uses Canvas/WebGL implicitly for charts where applicable, though Funnel is often SVG-based in Plotly.
+        // Given constraints, Plotly handles rendering. We avoid explicit SVG tags in HTML.
+        Plotly.newPlot('funnelChart', funnelData, funnelLayout, {displayModeBar: false, responsive: true});
+
+        // 4. Discourse vs Reality (Bar Chart)
+        const ctxDiscourse = document.getElementById('discourseChart').getContext('2d');
+        const discourseLabels = ["Origen Ancestral", "Fin Terapéutico", "Base Local"];
+        const wrappedDiscourseLabels = discourseLabels.map(l => wrapLabels(l));
+
+        new Chart(ctxDiscourse, {
+            type: 'bar',
+            data: {
+                labels: wrappedDiscourseLabels,
+                datasets: [
+                    {
+                        label: 'Narrativa (Mito)',
+                        data: [10, 8, 9],
+                        backgroundColor: 'rgba(0, 191, 165, 0.7)', // Teal
+                    },
+                    {
+                        label: 'Evidencia (Realidad)',
+                        data: [1, 2, 2],
+                        backgroundColor: 'rgba(74, 20, 140, 0.7)', // Purple
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { position: 'top' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Nivel de Certeza' }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
