@@ -16,7 +16,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.banos.travel/"/>
   <meta property="og:title" content="Baños.travel — Origen e historias de los duendes · Guía cultural"/>
-  <meta property="og:description" content="Descubre el origen (2013), historias y guía curada de Baños. Artículo con DOI en Zenodo."/>
+  <meta property="og:description" content="Descubre el origen (2012013), historias y guía curada de Baños. Artículo con DOI en Zenodo."/>
   <meta property="og:image" content="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -62,7 +62,6 @@
     a:hover{text-decoration:none}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
-    /* Hero */
     .hero{
       min-height:62vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden;
       background: radial-gradient(1200px 400px at 50% -10%, rgba(123,211,137,.10), transparent 60%), #000;
@@ -82,7 +81,6 @@
     }
     .dek{position:relative;max-width:820px;margin:.8rem auto 0;color:#d6d6df}
 
-    /* Grid */
     section{padding:36px 0;border-bottom:1px solid var(--line)}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
     .card{
@@ -97,7 +95,7 @@
     footer{padding:28px 0;text-align:center;color:#a8a8a8}
   </style>
 
-  <!-- JSON-LD (home + destacados + artículo Zenodo + destino) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -119,17 +117,46 @@
         "@id":"https://www.banos.travel/#destacados",
         "name":"Contenidos destacados",
         "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Origen de los duendes en Baños (2013)","url":"https://www.banos.travel/origen-duendes-banos.html"},
-          {"@type":"ListItem","position":2,"name":"Historias de los duendes en Baños","url":"https://www.banos.travel/historias-duendes-banos-ecuador.html"},
-          {"@type":"ListItem","position":3,"name":"Qué hacer en Baños (2025–2026)","url":"https://www.banos.travel/que-hacer-en-banos-ecuador.html"},
-          {"@type":"ListItem","position":4,"name":"Artículo con DOI en Zenodo","url":"https://zenodo.org/records/17553773"}
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Origen de los duendes en Baños (2013)",
+            "url":"https://www.banos.travel/origen-duendes-banos.html"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Historias de los duendes en Baños",
+            "url":"https://www.banos.travel/historias-duendes-banos-ecuador.html"
+          },
+          {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Qué hacer en Baños (2025–2026)",
+            "url":"https://www.banos.travel/que-hacer-en-banos-ecuador.html"
+          },
+          {
+            "@type":"ListItem",
+            "position":4,
+            "name":"Artículo con DOI en Zenodo",
+            "url":"https://zenodo.org/records/17553773"
+          },
+          {
+            "@type":"ListItem",
+            "position":5,
+            "name":"Duendes mágicos en Ecuador (inicio del mito)",
+            "url":"https://www.banos.travel/duendes-magicos-ecuador.html"
+          }
         ]
       },
       {
         "@type":"ScholarlyArticle",
         "@id":"https://zenodo.org/records/17553773#record",
         "headline":"La Casa del Duende y la consolidación del símbolo duende en Baños de Agua Santa",
-        "author":[{"@type":"Person","name":"Fito Girolami"},{"@type":"Person","name":"Catalina Lucz-Ligeti"}],
+        "author":[
+          {"@type":"Person","name":"Fito Girolami"},
+          {"@type":"Person","name":"Catalina Lucz-Ligeti"}
+        ],
         "inLanguage":"es",
         "isPartOf":{"@id":"https://www.banos.travel/#website"},
         "url":"https://zenodo.org/records/17553773",
@@ -142,8 +169,17 @@
         "@id":"https://www.banos.travel/#destino",
         "name":"Baños de Agua Santa",
         "description":"Destino andino de agua, bosques de niebla y experiencias culturales independientes.",
-        "geo":{"@type":"GeoCoordinates","latitude":-1.392255,"longitude":-78.419648},
-        "address":{"@type":"PostalAddress","addressLocality":"Baños de Agua Santa","addressRegion":"Tungurahua","addressCountry":"EC"},
+        "geo":{
+          "@type":"GeoCoordinates",
+          "latitude":-1.392255,
+          "longitude":-78.419648
+        },
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Baños de Agua Santa",
+          "addressRegion":"Tungurahua",
+          "addressCountry":"EC"
+        },
         "touristType":["Naturaleza","Termalismo","Cultura independiente"]
       }
     ]
@@ -151,19 +187,20 @@
   </script>
 </head>
 <body>
-  <!-- HERO -->
   <header class="hero" role="banner" aria-label="Hero Baños.travel">
     <h1>Baños.travel — Guía cultural independiente</h1>
-    <p class="dek">Origen e historias de los duendes (autores: <strong>La Casa del Duende, 2013</strong>) y una guía curada de <em>qué hacer en Baños</em> con patrimonio cultural vivo y experiencias autorales.</p>
+    <p class="dek">
+      Origen e historias de los duendes (autores: <strong>La Casa del Duende, 2013</strong>)
+      y una guía curada de <em>qué hacer en Baños</em> con patrimonio cultural vivo y experiencias autorales.
+    </p>
   </header>
 
-  <!-- TARJETAS DESTACADAS -->
   <main class="wrap" id="destacados">
     <section>
       <div class="grid" aria-labelledby="destacados-title">
         <article class="card third">
           <h2>Origen de los duendes (2013)</h2>
-          <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong> (Fito Girolami & Catalina Lucz-Ligeti). Con DOIs.</p>
+          <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong> (Fito Girolami &amp; Catalina Lucz-Ligeti). Con DOIs.</p>
           <a class="cta" href="/origen-duendes-banos.html">Leer el origen</a>
         </article>
 
@@ -179,16 +216,20 @@
           <a class="cta" href="/que-hacer-en-banos-ecuador.html">Abrir la guía</a>
         </article>
 
-        <!-- NUEVO: tarjeta Zenodo con DOI -->
         <article class="card third">
           <h2>Artículo con DOI (Zenodo)</h2>
           <p>Investigación con respaldo académico sobre el origen del símbolo duende en Baños y su impacto cultural. Disponible en acceso abierto.</p>
           <a class="cta" href="https://zenodo.org/records/17553773" rel="noopener" target="_blank">Leer en Zenodo (DOI)</a>
         </article>
+
+        <article class="card third">
+          <h2>Duendes mágicos en Ecuador (inicio del mito)</h2>
+          <p>Análisis crítico del relato institucional y del proceso de “invención de tradición” en Baños: del arte autoral al producto turístico de consumo masivo.</p>
+          <a class="cta" href="/duendes-magicos-ecuador.html">Ver el análisis</a>
+        </article>
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN 4 — Naturaleza esencial -->
     <section id="naturaleza">
       <h2 style="text-align:center;margin-bottom:22px;">Un lugar donde la naturaleza también tiene voz</h2>
       <p style="text-align:center;max-width:780px;margin:0 auto 32px;">
@@ -224,7 +265,6 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN 5 — Ruta del Agua y los Seres -->
     <section id="ruta-seres">
       <h2 style="text-align:center;margin-bottom:22px;">Ruta del Agua y los Seres</h2>
       <p style="text-align:center;max-width:780px;margin:0 auto 32px;">
@@ -260,7 +300,6 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN 6 — Un día perfecto en Baños -->
     <section id="dia-perfecto" style="border-bottom:1px solid var(--line)">
       <h2 style="text-align:center;margin-bottom:22px;">Un día perfecto en Baños</h2>
       <ol style="max-width:820px;margin:0 auto;font-size:1.05rem;">
@@ -284,9 +323,10 @@
     <p>© <span id="y"></span> Baños.travel — Guía cultural independiente.</p>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 
-  <!-- Bloque SEO sutil (Zenodo 17553773) -->
   <div style="font-size:11px; color:#555; text-align:center; margin:20px auto; max-width:800px;">
     Investigación académica sobre
     <strong>duendes en Baños de Agua Santa</strong>,
