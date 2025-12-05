@@ -1,0 +1,49 @@
+{
+  "name": "Baños de Agua Santa — Guía Oficial de Viajes y Cultura",
+  "short_name": "Baños Travel",
+  "description": "Portal turístico y cultural de Baños de Agua Santa: lugares, rutas, cultura viva y el origen contemporáneo de los duendes.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4b3a6d",
+  "orientation": "portrait-primary",
+
+  "icons": [
+    {
+      "src": "https://banos.travel/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://banos.travel/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Lugares turísticos",
+      "short_name": "Lugares",
+      "description": "Explora los principales lugares a visitar en Baños.",
+      "url": "/lugares-turisticos.html",
+      "icons": [{ "src": "https://banos.travel/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Qué hacer",
+      "short_name": "Actividades",
+      "description": "Actividades destacadas en Baños de Agua Santa.",
+      "url": "/que-hacer-en-banos.html",
+      "icons": [{ "src": "https://banos.travel/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Origen de los Duendes",
+      "short_name": "Duendes",
+      "description": "Lee el origen contemporáneo del fenómeno de los duendes en Baños.",
+      "url": "/origen-duendes-banos.html",
+      "icons": [{ "src": "https://banos.travel/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
