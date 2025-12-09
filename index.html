@@ -2,10 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- Manifest PWA -->
   <link rel="manifest" href="/manifest.json">
-
   <link rel="canonical" href="https://www.banos.travel/"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
@@ -14,7 +11,6 @@
   <meta name="description" content="Portal cultural independiente de Baños de Agua Santa. Lee el origen documentado de los duendes (2013), las historias y la guía curada de qué hacer en Baños. Incluye artículo con DOI en Zenodo."/>
   <meta name="author" content="Fito Girolami, Catalina Lucz-Ligeti"/>
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="es_EC"/>
   <meta property="og:site_name" content="Baños.travel"/>
   <meta property="og:type" content="website"/>
@@ -25,82 +21,286 @@
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta property="og:image:alt" content="Paisaje simbólico de Baños de Agua Santa con estética alternativa"/>
-
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Baños.travel — Origen e historias de los duendes · Guía cultural"/>
-  <meta name="twitter:description" content="Origen documentado (2013), historias y guía de qué hacer en Baños. Artículo con DOI en Zenodo."/>
-  <meta name="twitter:image" content="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png"/>
-  <meta name="twitter:image:alt" content="Paisaje simbólico de Baños de Agua Santa"/>
 
-  <!-- Geotags -->
   <meta name="geo.position" content="-1.392255;-78.419648">
   <meta name="geo.placename" content="Baños de Agua Santa, Ecuador">
   <meta name="geo.region" content="EC-T">
 
-  <!-- Favicons / theme -->
   <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
-  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d110f">
 
-  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin/>
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png" imagesizes="100vw">
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
   <style>
-    :root{
-      color-scheme: dark;
-      --bg:#0a0a0a; --ink:#e8e8e8; --muted:#b9b9b9;
-      --panel:#121212; --line:#242424;
-      --gold:#e9d27a; --gold-ink:#0d0d0a; --accent:#7bd389;
-      --radius:18px; --shadow:0 14px 48px rgba(0,0,0,.35);
+    :root {
+      /* Paleta Rústica Nocturna */
+      --bg: #0b0e0c; /* Negro bosque muy profundo */
+      --surface: #141816; /* Piedra oscura */
+      --surface-hover: #1c211f;
+      --text-main: #e0e0e0;
+      --text-muted: #9ca3af;
+      
+      /* Acentos */
+      --gold: #d4af37; /* Dorado antiguo */
+      --gold-glow: rgba(212, 175, 55, 0.15);
+      --moss: #4a5d4e; /* Verde musgo desaturado */
+      
+      /* UI */
+      --radius: 20px;
+      --border: 1px solid rgba(255,255,255,0.08);
+      --shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Poppins', sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.6 "Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    img{max-width:100%;height:auto;border-radius:12px}
-    a{color:var(--gold);text-decoration:underline}
-    a:hover{text-decoration:none}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
-    .hero{
-      min-height:62vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden;
-      background: radial-gradient(1200px 400px at 50% -10%, rgba(123,211,137,.10), transparent 60%), #000;
+    * { box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(74, 93, 78, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.05), transparent 25%);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    .hero::before{
-      content:""; position:absolute; inset:0;
-      background:url('https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png') center/cover no-repeat;
-      filter:saturate(0.9) contrast(1.05) brightness(.9);
-      opacity:.3;
-    }
-    .hero h1{
-      position:relative; margin:0; padding:1rem 1.25rem; border-radius:16px;
-      font:800 clamp(1.7rem,3.8vw,2.6rem)/1.2 "Poppins",system-ui;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25));
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
-    .dek{position:relative;max-width:820px;margin:.8rem auto 0;color:#d6d6df}
 
-    section{padding:36px 0;border-bottom:1px solid var(--line)}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .card{
-      grid-column:span 12; background:linear-gradient(180deg,#121212,#0e0e0e);
-      border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)
+    /* Tipografía */
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; color: #fff; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1rem; color: var(--gold); }
+    p { margin-bottom: 1.5rem; color: var(--text-muted); font-weight: 300; }
+    
+    a { color: var(--gold); text-decoration: none; transition: 0.3s ease; position: relative; }
+    a:not(.cta):after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 1px; background: var(--gold); transition: 0.3s; }
+    a:not(.cta):hover:after { width: 100%; }
+
+    /* Layout */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    
+    /* HERO SECTION - Cinematic */
+    .hero {
+      position: relative;
+      height: 90vh; /* Inmersivo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
     }
-    @media(min-width:760px){ .third{grid-column:span 4} }
-    h2{margin:.2rem 0 .6rem;font-size:1.25rem}
-    h3{margin:.2rem 0 .4rem;font-size:1.1rem}
-    .cta{display:inline-block;margin-top:.5rem;padding:.7rem 1rem;border-radius:12px;background:var(--accent);color:#0b2511;font-weight:800;text-decoration:none}
-    .cta:hover{filter:brightness(1.05)}
-    footer{padding:28px 0;text-align:center;color:#a8a8a8}
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ajuste para que la imagen se vea mejor en móviles y desktop */
+      object-position: center 30%; 
+      z-index: -1;
+      filter: brightness(0.8) contrast(1.1);
+      transform: scale(1.05); /* Zoom sutil para efecto */
+      animation: breathe 20s infinite alternate ease-in-out;
+    }
+
+    /* Degradado para que el texto se lea perfecto */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, 
+        rgba(11,14,12,0.3) 0%, 
+        rgba(11,14,12,0.6) 50%, 
+        var(--bg) 100%);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards 0.5s;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    /* BENTO GRID SYSTEM */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 60px 0;
+    }
+
+    /* Tarjetas "Glass/Stone" */
+    .card {
+      background: var(--surface);
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow), 0 0 30px var(--gold-glow);
+      border-color: rgba(212, 175, 55, 0.3);
+      background: var(--surface-hover);
+    }
+
+    /* Tarjeta destacada grande */
+    .card.featured {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--surface) 0%, #1e2522 100%);
+      border-color: var(--gold);
+    }
+    
+    @media (min-width: 900px) {
+      .card.featured {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    /* Botones */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: var(--gold);
+      color: #000;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.2s;
+    }
+    .cta:hover {
+      transform: scale(1.02);
+      filter: brightness(1.1);
+      box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    }
+    .cta:after { display: none !important; }
+    
+    .cta-ghost {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+    .cta-ghost:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* Secciones de Texto */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 80px auto 40px;
+    }
+    .section-header h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    
+    /* Listas con estilo */
+    ol.rustic-list {
+      list-style: none;
+      counter-reset: my-counter;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+    ol.rustic-list li {
+      counter-increment: my-counter;
+      background: rgba(255,255,255,0.03);
+      padding: 16px 24px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+    ol.rustic-list li:hover {
+      border-color: var(--moss);
+      background: rgba(74, 93, 78, 0.1);
+    }
+    ol.rustic-list li::before {
+      content: counter(my-counter, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-right: 20px;
+      opacity: 0.7;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 80px;
+      background: #080a09;
+    }
+
+    /* Animaciones */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes breathe {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    /* Scroll Reveal Class */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -110,81 +310,13 @@
         "@id":"https://www.banos.travel/#website",
         "url":"https://www.banos.travel/",
         "name":"Baños.travel",
-        "inLanguage":"es",
-        "potentialAction":{
-          "@type":"SearchAction",
-          "target":"https://www.banos.travel/?q={search_term_string}",
-          "query-input":"required name=search_term_string"
-        }
-      },
-      {
-        "@type":"ItemList",
-        "@id":"https://www.banos.travel/#destacados",
-        "name":"Contenidos destacados",
-        "itemListElement":[
-          {
-            "@type":"ListItem",
-            "position":1,
-            "name":"Origen de los duendes en Baños (2013)",
-            "url":"https://www.banos.travel/origen-duendes-banos.html"
-          },
-          {
-            "@type":"ListItem",
-            "position":2,
-            "name":"Historias de los duendes en Baños",
-            "url":"https://www.banos.travel/historias-duendes-banos-ecuador.html"
-          },
-          {
-            "@type":"ListItem",
-            "position":3,
-            "name":"Qué hacer en Baños (2025–2026)",
-            "url":"https://www.banos.travel/que-hacer-en-banos-ecuador.html"
-          },
-          {
-            "@type":"ListItem",
-            "position":4,
-            "name":"Artículo con DOI en Zenodo",
-            "url":"https://zenodo.org/records/17553773"
-          },
-          {
-            "@type":"ListItem",
-            "position":5,
-            "name":"Duendes mágicos (inicio del mito)",
-            "url":"https://www.banos.travel/Duendes-magicos.html"
-          }
-        ]
-      },
-      {
-        "@type":"ScholarlyArticle",
-        "@id":"https://zenodo.org/records/17553773#record",
-        "headline":"La Casa del Duende y la consolidación del símbolo duende en Baños de Agua Santa",
-        "author":[
-          {"@type":"Person","name":"Fito Girolami"},
-          {"@type":"Person","name":"Catalina Lucz-Ligeti"}
-        ],
-        "inLanguage":"es",
-        "isPartOf":{"@id":"https://www.banos.travel/#website"},
-        "url":"https://zenodo.org/records/17553773",
-        "identifier":"https://doi.org/10.5281/zenodo.17553773",
-        "sameAs":"https://doi.org/10.5281/zenodo.17553773",
-        "keywords":["duendes Baños","turismo cultural","arte feérico","patrimonio independiente","Ecuador"]
+        "inLanguage":"es"
       },
       {
         "@type":"TouristDestination",
         "@id":"https://www.banos.travel/#destino",
         "name":"Baños de Agua Santa",
         "description":"Destino andino de agua, bosques de niebla y experiencias culturales independientes.",
-        "geo":{
-          "@type":"GeoCoordinates",
-          "latitude":-1.392255,
-          "longitude":-78.419648
-        },
-        "address":{
-          "@type":"PostalAddress",
-          "addressLocality":"Baños de Agua Santa",
-          "addressRegion":"Tungurahua",
-          "addressCountry":"EC"
-        },
         "touristType":["Naturaleza","Termalismo","Cultura independiente"]
       }
     ]
@@ -193,148 +325,140 @@
 </head>
 
 <body>
-  <!-- HERO -->
-  <header class="hero" role="banner" aria-label="Hero Baños.travel">
-    <h1>Baños.travel — Guía cultural independiente</h1>
-    <p class="dek">
-      Origen e historias de los duendes (autores: <strong>La Casa del Duende, 2013</strong>)
-      y una guía curada de <em>qué hacer en Baños</em> con patrimonio cultural vivo y experiencias autorales.
-    </p>
+
+  <header class="hero" role="banner">
+    <img src="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png" alt="Paisaje místico de Baños de Agua Santa" class="hero-bg">
+    
+    <div class="hero-content">
+      <span class="badge">Guía Cultural Independiente</span>
+      <h1>Donde nacen las leyendas</h1>
+      <p style="font-size: 1.2rem; color: #e0e0e0; max-width: 600px; margin: 20px auto;">
+        Descubre el verdadero origen de los duendes en Baños, documentado por sus autores originales (2013), y explora una guía curada lejos del turismo masivo.
+      </p>
+      <div style="margin-top: 30px;">
+        <a href="#destacados" class="cta">Explorar la Guía</a>
+        <a href="https://zenodo.org/records/17553773" target="_blank" class="cta cta-ghost" style="margin-left: 10px">Ver DOI Académico</a>
+      </div>
+    </div>
   </header>
 
-  <!-- TARJETAS DESTACADAS -->
   <main class="wrap" id="destacados">
-    <section>
-      <div class="grid">
-        
-        <!-- 1 -->
-        <article class="card third">
-          <h2>Origen de los duendes (2013)</h2>
-          <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong>. Con DOIs y evidencia pública.</p>
-          <a class="cta" href="/origen-duendes-banos.html">Leer el origen</a>
-        </article>
+    
+    <div class="section-header reveal">
+      <h2>Investigación y Origen</h2>
+      <p>Una mirada crítica y documental sobre el patrimonio cultural de Baños de Agua Santa.</p>
+    </div>
 
-        <!-- 2 -->
-        <article class="card third">
-          <h2>Historias de los duendes</h2>
-          <p>De la oralidad previa a 2013 a la figura artesanal que fijó el símbolo actual. Galería y análisis comparado.</p>
-          <a class="cta" href="/historias-duendes-banos-ecuador.html">Ver las historias</a>
-        </article>
+    <section class="bento-grid">
+      
+      <article class="card featured reveal">
+        <div>
+          <h3>Origen de los duendes (2013)</h3>
+          <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong>. Frente a la masificación y distorsión actual, presentamos los DOIs y la evidencia pública de sus autores: Fito Girolami y Catalina Lucz-Ligeti.</p>
+          <a class="cta" href="/origen-duendes-banos.html">Leer investigación completa</a>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px dashed var(--gold);">
+           <p style="margin:0; font-size:0.9rem; font-style:italic; color: var(--gold);">"La verdadera magia incomoda, porque tiene autor."</p>
+        </div>
+      </article>
 
-        <!-- 3 -->
-        <article class="card third">
-          <h2>Qué hacer en Baños (2025–2026)</h2>
-          <p>Ruta esencial: Pailón del Diablo (entrada larga), Chamana, Casa del Árbol, termas y arte autoral.</p>
-          <a class="cta" href="/que-hacer-en-banos-ecuador.html">Abrir la guía</a>
-        </article>
+      <article class="card reveal">
+        <h3>Historias de los duendes</h3>
+        <p>De la oralidad previa a la figura artesanal que fijó el símbolo actual. Galería y análisis comparado.</p>
+        <a class="cta cta-ghost" href="/historias-duendes-banos-ecuador.html">Ver las historias</a>
+      </article>
 
-        <!-- 4 -->
-        <article class="card third">
-          <h2>Artículo con DOI (Zenodo)</h2>
-          <p>Investigación con respaldo académico sobre el origen del símbolo duende y su impacto cultural.</p>
-          <a class="cta" href="https://zenodo.org/records/17553773" target="_blank" rel="noopener">Leer en Zenodo (DOI)</a>
-        </article>
+      <article class="card reveal">
+        <h3>Duendes Mágicos</h3>
+        <p>Análisis crítico: invención de tradición y transformación del símbolo desde 2013.</p>
+        <a class="cta cta-ghost" href="/Duendes-magicos.html">Análisis Crítico</a>
+      </article>
 
-        <!-- 5 NUEVO -->
-        <article class="card third">
-          <h2>Duendes mágicos (inicio del mito)</h2>
-          <p>Análisis crítico del relato institucional, la invención de tradición y la transformación del símbolo desde 2013.</p>
-          <a class="cta" href="/Duendes-magicos.html">Ver el análisis</a>
-        </article>
+      <article class="card reveal" style="border-color: var(--moss);">
+        <h3 style="color: var(--accent);">Zenodo DOI</h3>
+        <p>Respaldo académico sobre el conflicto cultural y la autoría.</p>
+        <a class="cta" href="https://zenodo.org/records/17553773" target="_blank">Acceder al Paper</a>
+      </article>
 
-      </div>
     </section>
 
-    <!-- SECCIÓN NATURALEZA -->
     <section id="naturaleza">
-      <h2 style="text-align:center;margin-bottom:22px;">Un lugar donde la naturaleza también tiene voz</h2>
-      <p style="text-align:center;max-width:780px;margin:0 auto 32px;">
-        Baños no es solo adrenalina: es silencio, agua, contemplación y presencia. Lugares donde la naturaleza parece <em>hablarte</em>.
-      </p>
+      <div class="section-header reveal">
+        <h2>La Naturaleza Habla</h2>
+        <p>Baños no es solo adrenalina. Es silencio, bruma y presencia. Lugares donde el entorno te observa a ti.</p>
+      </div>
 
-      <div class="grid">
-        <article class="card third">
+      <div class="bento-grid">
+        <article class="card reveal">
           <h3>Pailón del Diablo</h3>
-          <p>La ruta larga y menos conocida es la más mística: bruma, eco y rugido permanente.</p>
-          <a class="cta" href="https://maps.app.goo.gl/6L1RZgL2ZtLaDfDR8" target="_blank">Cómo llegar</a>
+          <p>La ruta larga es la mística: siente el rugido permanente sin la multitud.</p>
         </article>
-
-        <article class="card third">
+        
+        <article class="card reveal">
           <h3>Cascada Chamana</h3>
-          <p>Un espacio de energía suave y relatos antiguos sobre voces del bosque.</p>
-          <a class="cta" href="https://maps.app.goo.gl/JN1r3wB2cCq2qutu9" target="_blank">Mapa</a>
+          <p>Energía suave y relatos antiguos sobre voces del bosque. Ideal para introspección.</p>
         </article>
 
-        <article class="card third">
+        <article class="card reveal">
           <h3>Casa del Árbol</h3>
-          <p>El amanecer sobre las nubes es una experiencia única de perspectiva y silencio.</p>
-          <a class="cta" href="https://maps.app.goo.gl/rKxFjBh3okUxoa3L8" target="_blank">Ruta</a>
+          <p>El amanecer sobre las nubes. Una experiencia de perspectiva absoluta.</p>
         </article>
       </div>
     </section>
 
-    <!-- RUTA DE LOS SERES -->
-    <section id="ruta-seres">
-      <h2 style="text-align:center;margin-bottom:22px;">Ruta del Agua y los Seres</h2>
-      <p style="text-align:center;max-width:780px;margin:0 auto 32px;">
-        Agua, vapor, musgo y piedra: los elementos donde se manifiesta la presencia simbólica de Baños.
-      </p>
-
-      <div class="grid">
-        <article class="card third">
-          <h3>Mirador del río Pastaza</h3>
-          <p>Lugar para sentarse a escuchar. Si entendés el agua, entendés Baños.</p>
-          <a class="cta" href="https://maps.app.goo.gl/5pwkE2Tm4wAoK2yX7" target="_blank">Mapa</a>
-        </article>
-
-        <article class="card third">
-          <h3>Termas + Noche</h3>
-          <p>En la bruma nocturna muchos visitantes registran figuras y presencias.</p>
-          <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank">Ver ubicación</a>
-        </article>
-
-        <article class="card third">
-          <h3>Aldea Mágica</h3>
-          <p>El único espacio donde los duendes tienen autor, historia y sentido. Obra viva, no decoración.</p>
-          <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank">Visitar</a>
-        </article>
+    <section id="ruta-seres" style="margin-top: 60px;">
+      <div class="card featured reveal" style="display: block;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Ruta del Agua y los Seres</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+          <div>
+            <p>Agua, vapor, musgo y piedra. Sigue esta ruta para entender la presencia simbólica de Baños.</p>
+            <ol class="rustic-list">
+              <li><strong>Mirador del río Pastaza:</strong> Si entiendes el agua, entiendes Baños.</li>
+              <li><strong>Termas Nocturnas:</strong> En la bruma, las figuras aparecen.</li>
+              <li><strong>Aldea Mágica:</strong> El único espacio donde los duendes tienen autor, historia y sentido. Obra viva.</li>
+            </ol>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 12px;">
+             <div style="text-align:center; padding: 20px;">
+                <h3 style="font-size: 3rem; color: var(--gold); margin-bottom: 0;">5</h3>
+                <p>Puntos de Poder</p>
+                <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank">Ver Mapa</a>
+             </div>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- DÍA PERFECTO -->
-    <section id="dia-perfecto">
-      <h2 style="text-align:center;margin-bottom:22px;">Un día perfecto en Baños</h2>
-      <ol style="max-width:820px;margin:0 auto;font-size:1.05rem;">
-        <li>🌄 Amanecer en <strong>Casa del Árbol</strong>.</li>
-        <li>☕ Café en el centro.</li>
-        <li>🌿 Caminata por <strong>Cascada Chamana</strong>.</li>
-        <li>🔥 Termas al atardecer.</li>
-        <li>✨ Cierre: visita nocturna a <strong>Aldea Mágica</strong>.</li>
-      </ol>
-
-      <p style="text-align:center;margin-top:16px;">
-        <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank">Ir al mapa</a>
-      </p>
     </section>
 
   </main>
 
   <footer>
-    <p>© <span id="y"></span> Baños.travel — Guía cultural independiente.</p>
+    <div class="wrap">
+      <h3>Baños.travel</h3>
+      <p>© <span id="y"></span> — Guía cultural independiente.</p>
+      <div style="margin-top: 20px; font-size: 0.85rem; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Investigación académica sobre duendes en Baños de Agua Santa, autenticidad cultural y turismo creativo.
+        <br>
+        <a href="https://zenodo.org/records/17553773" target="_blank" style="color: var(--moss);">DOI: 10.5281/zenodo.17553773</a>
+      </div>
+    </div>
   </footer>
 
   <script>
+    // Año actual
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Scroll Reveal Script (Nivel Dios Simple)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
-  <div style="font-size:11px; color:#555; text-align:center; margin:20px auto; max-width:800px;">
-    Investigación académica sobre
-    <strong>duendes en Baños de Agua Santa</strong>,
-    <em>autenticidad cultural</em> y <em>turismo creativo</em>.
-    Publicada con DOI en
-    <a href="https://zenodo.org/records/17553773" target="_blank" rel="noopener" style="color:#777;text-decoration:none;">
-      Zenodo (10.5281/zenodo.17553773)
-    </a>.
-  </div>
 </body>
 </html>
