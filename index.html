@@ -43,7 +43,7 @@
       --surface: #141816; /* Piedra oscura */
       --surface-hover: #1c211f;
       --text-main: #e0e0e0;
-      --text-muted: #9ca3af;
+      --text-muted: #b0b0b0;
       
       /* Acentos */
       --gold: #d4af37; /* Dorado antiguo */
@@ -76,7 +76,8 @@
 
     /* Tipografía */
     h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; color: #fff; letter-spacing: -0.02em; }
-    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+    /* H1 ahora es dorado porque está sobre fondo negro */
+    h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: var(--gold); } 
     h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1rem; color: var(--gold); }
     p { margin-bottom: 1.5rem; color: var(--text-muted); font-weight: 300; }
     
@@ -87,64 +88,51 @@
     /* Layout */
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     
-    /* HERO SECTION - Cinematic */
-    .hero {
+    /* NUEVO HERO SECTION - EDITORIAL STYLE */
+    .hero-header {
+        padding-bottom: 60px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero-image-block {
       position: relative;
-      height: 90vh; /* Inmersivo */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      height: 75vh; /* Altura inmersiva pero no total */
+      width: 100%;
       overflow: hidden;
     }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
+    .hero-image-block img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Ajuste para que la imagen se vea mejor en móviles y desktop */
       object-position: center 30%; 
-      z-index: -1;
-      filter: brightness(0.8) contrast(1.1);
-      transform: scale(1.05); /* Zoom sutil para efecto */
+      filter: brightness(0.9) contrast(1.1);
       animation: breathe 20s infinite alternate ease-in-out;
     }
-
-    /* Degradado para que el texto se lea perfecto */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, 
-        rgba(11,14,12,0.3) 0%, 
-        rgba(11,14,12,0.6) 50%, 
-        var(--bg) 100%);
-      z-index: 0;
+    
+    /* Degradado solo en la base de la imagen para unirla al fondo */
+    .hero-image-block::after {
+        content: ''; position: absolute; inset: 0;
+        background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 20px;
-      opacity: 0;
-      animation: fadeUp 1s ease-out forwards 0.5s;
+    .hero-text-block {
+      text-align: center;
+      padding-top: 60px; /* Espacio entre imagen y texto */
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .badge {
       display: inline-block;
       padding: 6px 16px;
-      border: 1px solid var(--gold);
+      border: 1px solid var(--moss); /* Cambiado a musgo para variar */
       border-radius: 50px;
       font-size: 0.75rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(4px);
+      color: var(--moss);
+      margin-bottom: 24px;
     }
 
     /* BENTO GRID SYSTEM */
@@ -204,20 +192,20 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 28px;
+      padding: 14px 32px; /* Un poco más grandes */
       border-radius: 12px;
       background: var(--gold);
-      color: #000;
-      font-weight: 600;
-      font-size: 0.95rem;
+      color: #0b0e0c;
+      font-weight: 700;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .cta:hover {
       transform: scale(1.02);
       filter: brightness(1.1);
-      box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     }
     .cta:after { display: none !important; }
     
@@ -234,9 +222,9 @@
     .section-header {
       text-align: center;
       max-width: 700px;
-      margin: 80px auto 40px;
+      margin: 100px auto 40px;
     }
-    .section-header h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .section-header h2 { font-size: 3rem; margin-bottom: 0.5rem; }
     
     /* Listas con estilo */
     ol.rustic-list {
@@ -249,7 +237,7 @@
     ol.rustic-list li {
       counter-increment: my-counter;
       background: rgba(255,255,255,0.03);
-      padding: 16px 24px;
+      padding: 18px 24px;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -267,23 +255,19 @@
       color: var(--gold);
       font-size: 1.5rem;
       margin-right: 20px;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 60px 0;
+      padding: 80px 0;
       text-align: center;
-      margin-top: 80px;
+      margin-top: 120px;
       background: #080a09;
     }
 
     /* Animaciones */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
     @keyframes breathe {
       from { transform: scale(1); }
       to { transform: scale(1.05); }
@@ -292,8 +276,8 @@
     /* Scroll Reveal Class */
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
     .reveal.active {
       opacity: 1;
@@ -326,20 +310,24 @@
 
 <body>
 
-  <header class="hero" role="banner">
-    <img src="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png" alt="Paisaje místico de Baños de Agua Santa" class="hero-bg">
+  <header class="hero-header" role="banner">
     
-    <div class="hero-content">
+    <div class="hero-image-block">
+       <img src="https://res.cloudinary.com/dykjwnszb/image/upload/v1751690811/c307d25e-1fb8-4ba8-b901-f400801590b2_1_nvtxrq.png" alt="Paisaje místico de Baños de Agua Santa" width="1200" height="800">
+    </div>
+
+    <div class="wrap hero-text-block reveal">
       <span class="badge">Guía Cultural Independiente</span>
       <h1>Donde nacen las leyendas</h1>
-      <p style="font-size: 1.2rem; color: #e0e0e0; max-width: 600px; margin: 20px auto;">
+      <p style="font-size: 1.25rem; max-width: 700px; margin: 24px auto 32px;">
         Descubre el verdadero origen de los duendes en Baños, documentado por sus autores originales (2013), y explora una guía curada lejos del turismo masivo.
       </p>
-      <div style="margin-top: 30px;">
+      <div>
         <a href="#destacados" class="cta">Explorar la Guía</a>
-        <a href="https://zenodo.org/records/17553773" target="_blank" class="cta cta-ghost" style="margin-left: 10px">Ver DOI Académico</a>
+        <a href="https://zenodo.org/records/17553773" target="_blank" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
       </div>
     </div>
+
   </header>
 
   <main class="wrap" id="destacados">
@@ -355,10 +343,10 @@
         <div>
           <h3>Origen de los duendes (2013)</h3>
           <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong>. Frente a la masificación y distorsión actual, presentamos los DOIs y la evidencia pública de sus autores: Fito Girolami y Catalina Lucz-Ligeti.</p>
-          <a class="cta" href="/origen-duendes-banos.html">Leer investigación completa</a>
+          <a class="cta" href="/origen-duendes-banos.html" style="margin-top: 20px;">Leer investigación completa</a>
         </div>
-        <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px dashed var(--gold);">
-           <p style="margin:0; font-size:0.9rem; font-style:italic; color: var(--gold);">"La verdadera magia incomoda, porque tiene autor."</p>
+        <div style="background: rgba(212, 175, 55, 0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center;">
+           <p style="margin:0; font-size:1.1rem; font-style:italic; color: var(--gold); font-family: var(--font-display);">"La verdadera magia incomoda, porque tiene autor y memoria."</p>
         </div>
       </article>
 
@@ -374,15 +362,15 @@
         <a class="cta cta-ghost" href="/Duendes-magicos.html">Análisis Crítico</a>
       </article>
 
-      <article class="card reveal" style="border-color: var(--moss);">
-        <h3 style="color: var(--accent);">Zenodo DOI</h3>
+      <article class="card reveal" style="border-color: var(--moss); background: linear-gradient(180deg, var(--surface), rgba(74, 93, 78, 0.1));">
+        <h3 style="color: #7bd389;">Zenodo DOI</h3>
         <p>Respaldo académico sobre el conflicto cultural y la autoría.</p>
-        <a class="cta" href="https://zenodo.org/records/17553773" target="_blank">Acceder al Paper</a>
+        <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/17553773" target="_blank">Acceder al Paper</a>
       </article>
 
     </section>
 
-    <section id="naturaleza">
+    <section id="naturaleza" style="margin-top: 100px;">
       <div class="section-header reveal">
         <h2>La Naturaleza Habla</h2>
         <p>Baños no es solo adrenalina. Es silencio, bruma y presencia. Lugares donde el entorno te observa a ti.</p>
@@ -406,25 +394,23 @@
       </div>
     </section>
 
-    <section id="ruta-seres" style="margin-top: 60px;">
-      <div class="card featured reveal" style="display: block;">
-        <h2 style="text-align: center; margin-bottom: 40px;">Ruta del Agua y los Seres</h2>
+    <section id="ruta-seres" style="margin-top: 80px;">
+      <div class="card featured reveal" style="display: block; background: linear-gradient(135deg, #141816 0%, #0f1210 100%);">
+        <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Ruta del Agua y los Seres</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
           <div>
-            <p>Agua, vapor, musgo y piedra. Sigue esta ruta para entender la presencia simbólica de Baños.</p>
-            <ol class="rustic-list">
+            <p style="font-size: 1.1rem;">Agua, vapor, musgo y piedra. Sigue esta ruta para entender la presencia simbólica de Baños lejos del ruido.</p>
+            <ol class="rustic-list" style="margin-top: 30px;">
               <li><strong>Mirador del río Pastaza:</strong> Si entiendes el agua, entiendes Baños.</li>
               <li><strong>Termas Nocturnas:</strong> En la bruma, las figuras aparecen.</li>
               <li><strong>Aldea Mágica:</strong> El único espacio donde los duendes tienen autor, historia y sentido. Obra viva.</li>
             </ol>
           </div>
-          <div style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 12px;">
-             <div style="text-align:center; padding: 20px;">
-                <h3 style="font-size: 3rem; color: var(--gold); margin-bottom: 0;">5</h3>
-                <p>Puntos de Poder</p>
-                <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank">Ver Mapa</a>
-             </div>
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center;">
+             <h3 style="font-size: 4rem; color: var(--gold); margin-bottom: 0; line-height: 1;">3</h3>
+                <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
+                <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" style="margin-top: 20px;">Ver Mapa de Ruta</a>
           </div>
         </div>
       </div>
@@ -434,12 +420,12 @@
 
   <footer>
     <div class="wrap">
-      <h3>Baños.travel</h3>
+      <h3 style="color: var(--gold); font-size: 1.8rem;">Baños.travel</h3>
       <p>© <span id="y"></span> — Guía cultural independiente.</p>
-      <div style="margin-top: 20px; font-size: 0.85rem; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <div style="margin-top: 30px; font-size: 0.9rem; color: #777; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;">
         Investigación académica sobre duendes en Baños de Agua Santa, autenticidad cultural y turismo creativo.
         <br>
-        <a href="https://zenodo.org/records/17553773" target="_blank" style="color: var(--moss);">DOI: 10.5281/zenodo.17553773</a>
+        <a href="https://zenodo.org/records/17553773" target="_blank" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">DOI: 10.5281/zenodo.17553773</a>
       </div>
     </div>
   </footer>
@@ -448,14 +434,14 @@
     // Año actual
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Scroll Reveal Script (Nivel Dios Simple)
+    // Scroll Reveal Script (Más suave)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 }); // Un poco más de umbral para que no salte tan rápido
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
