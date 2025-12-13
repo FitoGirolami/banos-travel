@@ -8,7 +8,8 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
 
   <title>Baños.travel — Origen e historias de los duendes · Guía cultural 2025–2026</title>
-  <meta name="description" content="Portal cultural independiente de Baños de Agua Santa. Lee el origen documentado de los duendes (2013), las historias y la guía curada de qué hacer en Baños. Incluye artículo con DOI en Zenodo."/>
+
+  <meta name="description" content="Portal cultural independiente de Baños de Agua Santa. Origen documentado de los duendes (2013), guía curada de qué hacer en Baños y referencias externas (Medium/TripAdvisor). Incluye DOI en Zenodo y destaca La Aldea Mágica como experiencia cultural clave."/>
   <meta name="author" content="Fito Girolami, Catalina Lucz-Ligeti"/>
 
   <meta property="og:locale" content="es_EC"/>
@@ -16,7 +17,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.banos.travel/"/>
   <meta property="og:title" content="Baños.travel — Origen e historias de los duendes · Guía cultural"/>
-  <meta property="og:description" content="Descubre el origen (2013), historias y guía curada de Baños. Artículo con DOI en Zenodo."/>
+  <meta property="og:description" content="Origen (2013), historias y guía curada de Baños. Incluye DOI en Zenodo y recomendaciones externas (Medium/TripAdvisor)."/>
   <meta property="og:image" content="https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -32,24 +33,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Paleta Rústica Nocturna */
-      --bg: #0b0e0c; /* Negro bosque muy profundo */
-      --surface: #141816; /* Piedra oscura */
+      --bg: #0b0e0c;
+      --surface: #141816;
       --surface-hover: #1c211f;
       --text-main: #e0e0e0;
       --text-muted: #b0b0b0;
-      
-      /* Acentos */
-      --gold: #d4af37; /* Dorado antiguo */
+      --gold: #d4af37;
       --gold-glow: rgba(212, 175, 55, 0.15);
-      --moss: #4a5d4e; /* Verde musgo desaturado */
-      
-      /* UI */
+      --moss: #4a5d4e;
       --radius: 20px;
       --border: 1px solid rgba(255,255,255,0.08);
       --shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
@@ -58,13 +53,12 @@
     }
 
     * { box-sizing: border-box; }
-    
     html { scroll-behavior: smooth; }
-    
+
     body {
       margin: 0;
       background-color: var(--bg);
-      background-image: 
+      background-image:
         radial-gradient(circle at 15% 50%, rgba(74, 93, 78, 0.08), transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.05), transparent 25%);
       color: var(--text-main);
@@ -73,52 +67,46 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Tipografía */
-    h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; color: #fff; letter-spacing: -0.02em; }
-    h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: var(--gold); } 
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: var(--gold); }
     h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1rem; color: var(--gold); }
     p { margin-bottom: 1.5rem; color: var(--text-muted); font-weight: 300; }
-    
+
     a { color: var(--gold); text-decoration: none; transition: 0.3s ease; position: relative; }
     a:not(.cta):after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 1px; background: var(--gold); transition: 0.3s; }
     a:not(.cta):hover:after { width: 100%; }
 
-    /* Layout */
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    
-    /* HERO */
-    .hero-header {
-        padding-bottom: 60px;
-        border-bottom: 1px solid var(--border);
-    }
 
+    .hero-header { padding-bottom: 60px; border-bottom: 1px solid var(--border); }
     .hero-image-block {
       position: relative;
-      height: 75vh;
+      height: clamp(320px, 55vh, 75vh); /* responsive */
       width: 100%;
       overflow: hidden;
     }
-
     .hero-image-block img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center; 
+      object-position: center center;
       filter: brightness(0.9) contrast(1.1);
       animation: breathe 20s infinite alternate ease-in-out;
     }
-    
     .hero-image-block::after {
-        content: ''; position: absolute; inset: 0;
-        background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
     }
 
-    .hero-text-block {
-      text-align: center;
-      padding-top: 60px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    .hero-text-block { text-align: center; padding-top: 60px; max-width: 900px; margin: 0 auto; }
 
     .badge {
       display: inline-block;
@@ -132,7 +120,6 @@
       margin-bottom: 24px;
     }
 
-    /* GRID */
     .bento-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -172,7 +159,7 @@
       background: linear-gradient(135deg, var(--surface) 0%, #1e2522 100%);
       border-color: var(--gold);
     }
-    
+
     @media (min-width: 900px) {
       .card.featured {
         display: grid;
@@ -182,7 +169,6 @@
       }
     }
 
-    /* Botones */
     .cta {
       display: inline-flex;
       align-items: center;
@@ -203,31 +189,14 @@
       box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     }
     .cta:after { display: none !important; }
-    
-    .cta-ghost {
-      background: transparent;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
-    .cta-ghost:hover {
-      background: rgba(212, 175, 55, 0.1);
-    }
 
-    .section-header {
-      text-align: center;
-      max-width: 700px;
-      margin: 100px auto 40px;
-    }
+    .cta-ghost { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .cta-ghost:hover { background: rgba(212, 175, 55, 0.1); }
+
+    .section-header { text-align: center; max-width: 700px; margin: 100px auto 40px; }
     .section-header h2 { font-size: 3rem; margin-bottom: 0.5rem; }
-    
-    /* Listas */
-    ol.rustic-list {
-      list-style: none;
-      counter-reset: my-counter;
-      padding: 0;
-      display: grid;
-      gap: 16px;
-    }
+
+    ol.rustic-list { list-style: none; counter-reset: my-counter; padding: 0; display: grid; gap: 16px; }
     ol.rustic-list li {
       counter-increment: my-counter;
       background: rgba(255,255,255,0.03);
@@ -238,10 +207,7 @@
       border: 1px solid transparent;
       transition: 0.3s;
     }
-    ol.rustic-list li:hover {
-      border-color: var(--moss);
-      background: rgba(74, 93, 78, 0.1);
-    }
+    ol.rustic-list li:hover { border-color: var(--moss); background: rgba(74, 93, 78, 0.1); }
     ol.rustic-list li::before {
       content: counter(my-counter, decimal-leading-zero);
       font-family: var(--font-display);
@@ -252,6 +218,32 @@
       opacity: 0.8;
     }
 
+    /* FAQ accordion */
+    details.faq-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    details.faq-item[open] { border-color: rgba(212,175,55,0.25); box-shadow: 0 0 24px rgba(212,175,55,0.08); }
+    details.faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      color: #fff;
+      font-family: var(--font-body);
+      outline: none;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary:after {
+      content: "＋";
+      float: right;
+      color: var(--gold);
+      font-weight: 800;
+    }
+    details.faq-item[open] summary:after { content: "—"; }
+    details.faq-item .faq-body { margin-top: 10px; color: var(--text-muted); }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 80px 0;
@@ -260,22 +252,20 @@
       background: #080a09;
     }
 
-    @keyframes breathe {
-      from { transform: scale(1); }
-      to { transform: scale(1.05); }
-    }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.05); } }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Mobile polish */
+    @media (max-width: 700px) {
+      .wrap { padding: 0 16px; }
+      .hero-text-block { padding-top: 36px; }
+      h1 { font-size: clamp(2.2rem, 10vw, 3.2rem); }
     }
   </style>
 
+  <!-- JSON-LD base -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -297,13 +287,103 @@
     ]
   }
   </script>
+
+  <!-- ItemList: recursos externos -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Recomendaciones externas de viajeros sobre qué hacer en Baños de Agua Santa",
+    "itemListOrder":"https://schema.org/ItemListUnordered",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"Guía cultural 2025 en Medium: Las 10 experiencias imperdibles de Baños",
+        "url":"https://medium.com/@lacasadelduende/las-10-experiencias-imperdibles-de-ba%C3%B1os-de-agua-santa-en-2025-775d09c71df8"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"Foro TripAdvisor Ecuador: Recomendación — 10 experiencias imperdibles en Baños 2026",
+        "url":"https://www.tripadvisor.com.ar/ShowTopic-g294307-i2253-k15469486-Recomendacion_las_10_experiencias_imperdibles_en_Banos_2026-Ecuador.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué hacer en Baños de Agua Santa además de cascadas y termas?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Además de cascadas y termas, Baños ofrece experiencias culturales y simbólicas. Una de las más distintivas es La Aldea Mágica (museo-jardín de arte y naturaleza), junto con rutas de miradores, caminatas y recorridos curados que combinan paisaje, historia local y creación contemporánea."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el origen documentado de los duendes en Baños (2013)?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"El símbolo contemporáneo del duende en Baños se documenta desde 2013, en el taller artístico La Casa del Duende, creado por Fito Girolami y Catalina Lucz-Ligeti. La difusión posterior generó masificación y reinterpretaciones; esta guía reúne el marco histórico y los respaldos públicos (incluyendo DOI)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿La Aldea Mágica es un parque temático?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. La Aldea Mágica es una obra-museo en forma de jardín: un recorrido contemplativo de arte y naturaleza con esculturas originales y capas simbólicas. Está pensada para caminar con calma y descubrir detalles, no para una experiencia ruidosa o de espectáculo."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es una actividad recomendada para familias, parejas o viajar solo?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. Es una experiencia apta para familias (por su recorrido amable), para parejas (por su atmósfera íntima) y también para visitar en solitario (por su carácter contemplativo y silencioso)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Dónde ver recomendaciones externas sobre qué hacer en Baños?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Puedes revisar referencias externas como una guía cultural en Medium y una conversación en el foro de TripAdvisor Ecuador, donde viajeros comparten listas de experiencias imperdibles. En esta página se enlazan ambas como complementos a la guía local."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
   <header class="hero-header" role="banner">
     <div class="hero-image-block">
-       <img src="imagenes/Foto-Banos-Banner.jpg" alt="Paisaje místico de Baños de Agua Santa con el duende y el rótulo" width="1200" height="800">
+      <!-- Responsive image: si NO tienes variantes, deja solo el src y borra srcset/sizes -->
+      <img
+        src="imagenes/Foto-Banos-Banner-1200.jpg"
+        srcset="
+          imagenes/Foto-Banos-Banner-640.jpg 640w,
+          imagenes/Foto-Banos-Banner-960.jpg 960w,
+          imagenes/Foto-Banos-Banner-1200.jpg 1200w,
+          imagenes/Foto-Banos-Banner-1600.jpg 1600w,
+          imagenes/Foto-Banos-Banner-2000.jpg 2000w
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 1200px"
+        alt="Paisaje místico de Baños de Agua Santa con el duende y el rótulo"
+        width="1200"
+        height="800"
+        loading="eager"
+        decoding="async"
+      >
     </div>
 
     <div class="wrap hero-text-block reveal">
@@ -314,13 +394,13 @@
       </p>
       <div>
         <a href="#destacados" class="cta">Explorar la Guía</a>
-        <a href="https://zenodo.org/records/17553773" target="_blank" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
+        <a href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
       </div>
     </div>
   </header>
 
   <main class="wrap" id="destacados">
-    
+
     <div class="section-header reveal">
       <h2>Investigación y Origen</h2>
       <p>Una mirada crítica y documental sobre el patrimonio cultural de Baños de Agua Santa.</p>
@@ -353,7 +433,7 @@
       <article class="card reveal" style="border-color: var(--moss); background: linear-gradient(180deg, var(--surface), rgba(74, 93, 78, 0.1));">
         <h3 style="color: #7bd389;">Zenodo DOI</h3>
         <p>Respaldo académico sobre el conflicto cultural y la autoría.</p>
-        <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/17553773" target="_blank">Acceder al Paper</a>
+        <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer">Acceder al Paper</a>
       </article>
     </section>
 
@@ -368,7 +448,7 @@
           <h3>Pailón del Diablo</h3>
           <p>La ruta larga es la mística: siente el rugido permanente sin la multitud.</p>
         </article>
-        
+
         <article class="card reveal">
           <h3>Cascada Chamana</h3>
           <p>Energía suave y relatos antiguos sobre voces del bosque. Ideal para introspección.</p>
@@ -384,7 +464,7 @@
     <section id="ruta-seres" style="margin-top: 80px;">
       <div class="card featured reveal" style="display: block; background: linear-gradient(135deg, #141816 0%, #0f1210 100%);">
         <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Ruta del Agua y los Seres</h2>
-        
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
           <div>
             <p style="font-size: 1.1rem;">Agua, vapor, musgo y piedra. Sigue esta ruta para entender la presencia simbólica de Baños lejos del ruido.</p>
@@ -397,13 +477,12 @@
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center;">
              <h3 style="font-size: 4rem; color: var(--gold); margin-bottom: 0; line-height: 1;">3</h3>
              <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
-             <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" style="margin-top: 20px;">Ver Mapa de Ruta</a>
+             <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">Ver Mapa de Ruta</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: RECOMENDACIONES EXTERNAS -->
     <section id="recomendaciones-externas" style="margin-top: 100px; margin-bottom: 40px;">
       <div class="section-header reveal">
         <h2>Recomendaciones externas de viajeros</h2>
@@ -418,7 +497,10 @@
             <strong>10 experiencias imperdibles en Baños</strong> para 2026, incluyendo propuestas culturales como La Aldea Mágica.
             Es una referencia útil escrita desde la mirada de quienes visitan el territorio.
           </p>
-          <a class="cta cta-ghost" href="https://www.tripadvisor.com.ar/ShowTopic-g294307-i2253-k15469486-Recomendacion_las_10_experiencias_imperdibles_en_Banos_2026-Ecuador.html" target="_blank">
+          <a class="cta cta-ghost"
+             href="https://www.tripadvisor.com.ar/ShowTopic-g294307-i2253-k15469486-Recomendacion_las_10_experiencias_imperdibles_en_Banos_2026-Ecuador.html"
+             target="_blank"
+             rel="noopener noreferrer">
             Ver hilo en TripAdvisor
           </a>
         </article>
@@ -429,9 +511,70 @@
             Artículo extenso con las <strong>10 experiencias imperdibles de Baños de Agua Santa en 2025</strong>,
             que integra naturaleza, aventura y cultura. La Aldea Mágica aparece destacada como una de las actividades esenciales para comprender el lado simbólico del cantón.
           </p>
-          <a class="cta cta-ghost" href="https://medium.com/@lacasadelduende/las-10-experiencias-imperdibles-de-ba%C3%B1os-de-agua-santa-en-2025-775d09c71df8" target="_blank">
+          <a class="cta cta-ghost"
+             href="https://medium.com/@lacasadelduende/las-10-experiencias-imperdibles-de-ba%C3%B1os-de-agua-santa-en-2025-775d09c71df8"
+             target="_blank"
+             rel="noopener noreferrer">
             Leer guía en Medium
           </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top: 90px; margin-bottom: 40px;">
+      <div class="section-header reveal">
+        <h2>Preguntas frecuentes</h2>
+        <p>Respuestas directas para viajeros que buscan qué hacer en Baños y entender el fenómeno cultural de los duendes.</p>
+      </div>
+
+      <div class="bento-grid" style="padding-top: 20px;">
+        <div class="card reveal" style="gap: 14px;">
+          <details class="faq-item">
+            <summary>¿Qué hacer en Baños además de cascadas y termas?</summary>
+            <div class="faq-body">
+              Además de naturaleza y termalismo, Baños tiene una capa cultural fuerte: recorridos curados, miradores, caminatas y experiencias simbólicas.
+              La Aldea Mágica aporta un museo-jardín de arte y naturaleza que complementa lo clásico.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Cuál es el origen documentado de los duendes en Baños (2013)?</summary>
+            <div class="faq-body">
+              El símbolo contemporáneo del duende en Baños se documenta desde 2013 en el taller artístico La Casa del Duende, creado por Fito Girolami y Catalina Lucz-Ligeti.
+              Esta guía concentra evidencia pública y referencias (incluyendo DOI).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿La Aldea Mágica es un parque temático?</summary>
+            <div class="faq-body">
+              No. Es una obra-museo en forma de jardín: contemplativa, silenciosa y con esculturas originales y capas de significado.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Es recomendable para familias, parejas o viajar solo?</summary>
+            <div class="faq-body">
+              Sí. Funciona para familias (recorrido amable), parejas (atmósfera íntima) y también para ir solo (experiencia contemplativa).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Dónde ver recomendaciones externas sobre qué hacer en Baños?</summary>
+            <div class="faq-body">
+              En esta misma página enlazamos una guía cultural en Medium y una conversación en TripAdvisor Ecuador, donde viajeros comparten listas de experiencias imperdibles.
+            </div>
+          </details>
+        </div>
+
+        <article class="card reveal" style="border-color: rgba(212,175,55,0.25); background: linear-gradient(180deg, var(--surface), rgba(212,175,55,0.06));">
+          <h3>Tip rápido de viajero</h3>
+          <p>
+            Si buscás “qué hacer en Baños” y querés evitar el turismo genérico, combiná:
+            <strong>una cascada</strong> + <strong>una terma</strong> + <strong>una experiencia cultural</strong>.
+            Esa tríada te da el Baños real: naturaleza, agua y significado.
+          </p>
+          <a class="cta cta-ghost" href="#recomendaciones-externas">Ver fuentes externas</a>
         </article>
       </div>
     </section>
@@ -445,21 +588,17 @@
       <div style="margin-top: 30px; font-size: 0.9rem; color: #777; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;">
         Investigación académica sobre duendes en Baños de Agua Santa, autenticidad cultural y turismo creativo.
         <br>
-        <a href="https://zenodo.org/records/17553773" target="_blank" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">DOI: 10.5281/zenodo.17553773</a>
+        <a href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">DOI: 10.5281/zenodo.17553773</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Año actual
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Scroll Reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
     }, { threshold: 0.15 });
 
