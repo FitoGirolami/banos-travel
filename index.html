@@ -75,7 +75,6 @@
 
     /* Tipografía */
     h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; color: #fff; letter-spacing: -0.02em; }
-    /* H1 ahora es dorado porque está sobre fondo negro */
     h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: var(--gold); } 
     h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1rem; color: var(--gold); }
     p { margin-bottom: 1.5rem; color: var(--text-muted); font-weight: 300; }
@@ -87,7 +86,7 @@
     /* Layout */
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     
-    /* NUEVO HERO SECTION - EDITORIAL STYLE */
+    /* HERO */
     .hero-header {
         padding-bottom: 60px;
         border-bottom: 1px solid var(--border);
@@ -95,7 +94,7 @@
 
     .hero-image-block {
       position: relative;
-      height: 75vh; /* Altura inmersiva pero no total */
+      height: 75vh;
       width: 100%;
       overflow: hidden;
     }
@@ -104,13 +103,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Ajusta esto si el duende se corta. Ej: center center, o center 20% */
       object-position: center center; 
       filter: brightness(0.9) contrast(1.1);
       animation: breathe 20s infinite alternate ease-in-out;
     }
     
-    /* Degradado solo en la base de la imagen para unirla al fondo */
     .hero-image-block::after {
         content: ''; position: absolute; inset: 0;
         background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
@@ -118,7 +115,7 @@
 
     .hero-text-block {
       text-align: center;
-      padding-top: 60px; /* Espacio entre imagen y texto */
+      padding-top: 60px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -126,7 +123,7 @@
     .badge {
       display: inline-block;
       padding: 6px 16px;
-      border: 1px solid var(--moss); /* Cambiado a musgo para variar */
+      border: 1px solid var(--moss);
       border-radius: 50px;
       font-size: 0.75rem;
       letter-spacing: 0.1em;
@@ -135,7 +132,7 @@
       margin-bottom: 24px;
     }
 
-    /* BENTO GRID SYSTEM */
+    /* GRID */
     .bento-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -143,7 +140,6 @@
       padding: 60px 0;
     }
 
-    /* Tarjetas "Glass/Stone" */
     .card {
       background: var(--surface);
       border: var(--border);
@@ -171,7 +167,6 @@
       background: var(--surface-hover);
     }
 
-    /* Tarjeta destacada grande */
     .card.featured {
       grid-column: 1 / -1;
       background: linear-gradient(135deg, var(--surface) 0%, #1e2522 100%);
@@ -192,7 +187,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 32px; /* Un poco más grandes */
+      padding: 14px 32px;
       border-radius: 12px;
       background: var(--gold);
       color: #0b0e0c;
@@ -218,7 +213,6 @@
       background: rgba(212, 175, 55, 0.1);
     }
 
-    /* Secciones de Texto */
     .section-header {
       text-align: center;
       max-width: 700px;
@@ -226,7 +220,7 @@
     }
     .section-header h2 { font-size: 3rem; margin-bottom: 0.5rem; }
     
-    /* Listas con estilo */
+    /* Listas */
     ol.rustic-list {
       list-style: none;
       counter-reset: my-counter;
@@ -258,7 +252,6 @@
       opacity: 0.8;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border);
       padding: 80px 0;
@@ -267,13 +260,11 @@
       background: #080a09;
     }
 
-    /* Animaciones */
     @keyframes breathe {
       from { transform: scale(1); }
       to { transform: scale(1.05); }
     }
 
-    /* Scroll Reveal Class */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -311,7 +302,6 @@
 <body>
 
   <header class="hero-header" role="banner">
-    
     <div class="hero-image-block">
        <img src="imagenes/Foto-Banos-Banner.jpg" alt="Paisaje místico de Baños de Agua Santa con el duende y el rótulo" width="1200" height="800">
     </div>
@@ -327,7 +317,6 @@
         <a href="https://zenodo.org/records/17553773" target="_blank" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
       </div>
     </div>
-
   </header>
 
   <main class="wrap" id="destacados">
@@ -338,7 +327,6 @@
     </div>
 
     <section class="bento-grid">
-      
       <article class="card featured reveal">
         <div>
           <h3>Origen de los duendes (2013)</h3>
@@ -367,7 +355,6 @@
         <p>Respaldo académico sobre el conflicto cultural y la autoría.</p>
         <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/17553773" target="_blank">Acceder al Paper</a>
       </article>
-
     </section>
 
     <section id="naturaleza" style="margin-top: 100px;">
@@ -409,10 +396,43 @@
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center;">
              <h3 style="font-size: 4rem; color: var(--gold); margin-bottom: 0; line-height: 1;">3</h3>
-                <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
-                <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" style="margin-top: 20px;">Ver Mapa de Ruta</a>
+             <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
+             <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" style="margin-top: 20px;">Ver Mapa de Ruta</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: RECOMENDACIONES EXTERNAS -->
+    <section id="recomendaciones-externas" style="margin-top: 100px; margin-bottom: 40px;">
+      <div class="section-header reveal">
+        <h2>Recomendaciones externas de viajeros</h2>
+        <p>Además de esta guía independiente, compartimos recursos externos donde viajeros y plataformas culturales recomiendan qué hacer en Baños de Agua Santa.</p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="card reveal">
+          <h3>Foro de viajeros en TripAdvisor</h3>
+          <p>
+            Conversación abierta en el foro de Ecuador donde se comparten
+            <strong>10 experiencias imperdibles en Baños</strong> para 2026, incluyendo propuestas culturales como La Aldea Mágica.
+            Es una referencia útil escrita desde la mirada de quienes visitan el territorio.
+          </p>
+          <a class="cta cta-ghost" href="https://www.tripadvisor.com.ar/ShowTopic-g294307-i2253-k15469486-Recomendacion_las_10_experiencias_imperdibles_en_Banos_2026-Ecuador.html" target="_blank">
+            Ver hilo en TripAdvisor
+          </a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Guía cultural 2025 en Medium</h3>
+          <p>
+            Artículo extenso con las <strong>10 experiencias imperdibles de Baños de Agua Santa en 2025</strong>,
+            que integra naturaleza, aventura y cultura. La Aldea Mágica aparece destacada como una de las actividades esenciales para comprender el lado simbólico del cantón.
+          </p>
+          <a class="cta cta-ghost" href="https://medium.com/@lacasadelduende/las-10-experiencias-imperdibles-de-ba%C3%B1os-de-agua-santa-en-2025-775d09c71df8" target="_blank">
+            Leer guía en Medium
+          </a>
+        </article>
       </div>
     </section>
 
@@ -434,7 +454,7 @@
     // Año actual
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Scroll Reveal Script (Más suave)
+    // Scroll Reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -448,3 +468,4 @@
 
 </body>
 </html>
+
