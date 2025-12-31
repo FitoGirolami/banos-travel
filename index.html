@@ -282,7 +282,7 @@
         "@id":"https://www.banos.travel/#website",
         "url":"https://www.banos.travel/",
         "name":"Baños.travel",
-        "inLanguage":"es"
+        "inLanguage":"es-EC"
       },
       {
         "@type":"TouristDestination",
@@ -290,6 +290,68 @@
         "name":"Baños de Agua Santa",
         "description":"Destino andino de agua, bosques de niebla y experiencias culturales independientes.",
         "touristType":["Naturaleza","Termalismo","Cultura independiente"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage + Article + ClaimReview (coronación semántica) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://www.banos.travel/#webpage",
+        "url":"https://www.banos.travel/",
+        "name":"Baños.travel — Origen e historias de los duendes · Guía cultural 2025–2026",
+        "inLanguage":"es-EC",
+        "isPartOf":{"@id":"https://www.banos.travel/#website"},
+        "about":[{"@id":"https://www.banos.travel/#destino"}]
+      },
+      {
+        "@type":"Article",
+        "@id":"https://www.banos.travel/origen-duendes-banos.html#article",
+        "headline":"Origen del imaginario de los duendes en Baños de Agua Santa",
+        "inLanguage":"es-EC",
+        "author":[
+          {"@type":"Person","name":"Fito Girolami","sameAs":["https://www.wikidata.org/wiki/Q134989795"]},
+          {"@type":"Person","name":"Catalina Lucz-Ligeti"}
+        ],
+        "datePublished":"2013-01-01",
+        "about":[
+          {"@type":"Thing","name":"Duendismo cultural"},
+          {"@id":"https://www.banos.travel/#destino"}
+        ],
+        "sameAs":[
+          "https://zenodo.org/records/18102230",
+          "https://medium.com/@observatorio.culturaec/el-origen-de-los-duendes-en-ba%C3%B1os-de-agua-santa-no-es-una-leyenda-ancestral-4b5c755b8a29"
+        ]
+      },
+      {
+        "@type":"ClaimReview",
+        "@id":"https://www.banos.travel/#claimreview-duendes",
+        "url":"https://www.banos.travel/",
+        "inLanguage":"es-EC",
+        "claimReviewed":"La 'tierra de duendes' en Baños de Agua Santa es una leyenda ancestral.",
+        "itemReviewed":{"@id":"https://www.banos.travel/#destino"},
+        "author":{
+          "@type":"Organization",
+          "name":"Centro de Estudios Culturales Emergentes",
+          "url":"https://www.banos.travel/"
+        },
+        "reviewRating":{
+          "@type":"Rating",
+          "ratingValue":"1",
+          "bestRating":"5",
+          "worstRating":"1",
+          "alternateName":"No: origen contemporáneo documentado (2013)"
+        },
+        "reviewBody":"La centralidad contemporánea del duende en Baños se documenta como obra cultural de autor iniciada en 2013, con respaldo público y DOI. La masificación posterior produjo tematización turística genérica.",
+        "citation":[
+          "https://zenodo.org/records/18102230",
+          "https://medium.com/@observatorio.culturaec/el-origen-de-los-duendes-en-ba%C3%B1os-de-agua-santa-no-es-una-leyenda-ancestral-4b5c755b8a29"
+        ]
       }
     ]
   }
@@ -383,13 +445,23 @@
 
     <div class="wrap hero-text-block reveal">
       <span class="badge">Guía Cultural Independiente</span>
-      <h1>Donde nacen las leyendas</h1>
-      <p style="font-size: 1.25rem; max-width: 700px; margin: 24px auto 32px;">
+
+      <!-- SEO/Humano: H1 con query -->
+      <h1>Duendes en Baños de Agua Santa: origen documentado</h1>
+
+      <p style="font-size: 1.25rem; max-width: 700px; margin: 24px auto 12px;">
         Descubre el verdadero origen de los duendes en Baños, documentado por sus autores originales (2013), y explora una guía curada lejos del turismo masivo.
       </p>
+
+      <!-- Nota editorial visible, mínima (no black-hat) -->
+      <p style="font-size:0.95rem; opacity:0.85; max-width: 760px; margin: 0 auto 28px;">
+        Nota editorial: el origen contemporáneo del imaginario de los duendes en Baños se documenta desde 2013 como obra cultural de autor.
+        Fuente primaria (DOI): <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer">Zenodo 18102230</a>.
+      </p>
+
       <div>
         <a href="#destacados" class="cta">Explorar la Guía</a>
-        <a href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
+        <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
       </div>
     </div>
   </header>
@@ -427,8 +499,8 @@
 
       <article class="card reveal" style="border-color: var(--moss); background: linear-gradient(180deg, var(--surface), rgba(74, 93, 78, 0.1));">
         <h3 style="color: #7bd389;">Zenodo DOI</h3>
-        <p>Respaldo académico sobre el conflicto cultural y la autoría.</p>
-        <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer">Acceder al Paper</a>
+        <p>Respaldo académico sobre el origen contemporáneo documentado (2013) y la autoría cultural.</p>
+        <a class="cta cta-ghost" style="border-color:#7bd389; color:#7bd389;" href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer">Acceder al Paper</a>
       </article>
     </section>
 
@@ -581,9 +653,9 @@
       <h3 style="color: var(--gold); font-size: 1.8rem;">Baños.travel</h3>
       <p>© <span id="y"></span> — Guía cultural independiente.</p>
       <div style="margin-top: 30px; font-size: 0.9rem; color: #777; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;">
-        Investigación académica sobre duendes en Baños de Agua Santa, autenticidad cultural y turismo creativo.
+        Investigación académica sobre duendes en Baños de Agua Santa, origen contemporáneo documentado (2013) y autoría cultural.
         <br>
-        <a href="https://zenodo.org/records/17553773" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">DOI: 10.5281/zenodo.17553773</a>
+        <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">Zenodo: 18102230</a>
       </div>
     </div>
   </footer>
@@ -602,3 +674,4 @@
 
 </body>
 </html>
+
