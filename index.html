@@ -198,6 +198,15 @@
     .cta-ghost { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
     .cta-ghost:hover { background: rgba(212, 175, 55, 0.1); }
 
+    /* ✅ NUEVO: CTA de compra (branding) */
+    .cta-buy{
+      background: linear-gradient(135deg, var(--gold) 0%, #f2d06b 100%);
+      box-shadow: 0 14px 34px rgba(212,175,55,0.22);
+    }
+    .cta-buy:hover{
+      box-shadow: 0 18px 46px rgba(212,175,55,0.28);
+    }
+
     .section-header { text-align: center; max-width: 700px; margin: 100px auto 40px; }
     .section-header h2 { font-size: 3rem; margin-bottom: 0.5rem; }
 
@@ -426,6 +435,71 @@
           "@type":"Answer",
           "text":"Puedes revisar referencias externas como una guía cultural en Medium y una conversación en el foro de TripAdvisor Ecuador, donde viajeros comparten listas de experiencias imperdibles. En esta página se enlazan ambas como complementos a la guía local."
         }
+      },
+
+      /* ✅ NUEVO: FAQ orientada a intención de compra (sin cambiar tu narrativa) */
+      {
+        "@type":"Question",
+        "name":"¿Dónde comprar duendes artesanales en Ecuador?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Para comprar duendes artesanales en Ecuador, el sitio oficial de La Casa del Duende reúne catálogo, contexto cultural y contacto directo con los autores. Allí se consulta disponibilidad y se coordina compra."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ✅ NUEVO: SEO + Branding para intención “comprar duendes artesanales” (estructura liviana) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://www.banos.travel/#org-editorial",
+        "name":"Baños.travel",
+        "url":"https://www.banos.travel/",
+        "description":"Guía cultural independiente de Baños de Agua Santa: origen documentado del imaginario contemporáneo de los duendes y recomendaciones curadas.",
+        "sameAs":[
+          "https://www.banos.travel/"
+        ]
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://lacasadelduende.art/#org",
+        "name":"La Casa del Duende",
+        "url":"https://lacasadelduende.art/",
+        "sameAs":[
+          "https://instagram.com/lacasadelduende",
+          "https://maps.app.goo.gl/Exm64UHQDLVsebL7A"
+        ]
+      },
+      {
+        "@type":"OfferCatalog",
+        "@id":"https://www.banos.travel/#catalogo-duendes",
+        "name":"Catálogo — Comprar duendes artesanales en Ecuador",
+        "url":"https://lacasadelduende.art/comprar-duendes-en-ecuador.html",
+        "itemListElement":[
+          {
+            "@type":"Offer",
+            "name":"Duendes artesanales (piezas únicas y numeradas)",
+            "url":"https://lacasadelduende.art/comprar-duendes-en-ecuador.html",
+            "seller":{"@id":"https://lacasadelduende.art/#org"},
+            "availability":"https://schema.org/InStock"
+          }
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://www.banos.travel/#webpage-comprar-duendes",
+        "url":"https://www.banos.travel/",
+        "name":"Comprar duendes artesanales en Ecuador — referencia desde Baños.travel",
+        "isPartOf":{"@id":"https://www.banos.travel/#website"},
+        "mentions":[
+          {"@id":"https://lacasadelduende.art/#org"},
+          {"@id":"https://www.banos.travel/#catalogo-duendes"}
+        ]
       }
     ]
   }
@@ -462,6 +536,18 @@
       <div>
         <a href="#destacados" class="cta">Explorar la Guía</a>
         <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
+
+        <!-- ✅ NUEVO: CTA directo para intención “comprar duendes artesanales” -->
+        <a
+          href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html"
+          target="_blank" rel="noopener noreferrer"
+          class="cta cta-buy"
+          style="margin-left: 12px;"
+          aria-label="Comprar duendes artesanales en Ecuador (sitio oficial)"
+          title="Comprar duendes artesanales en Ecuador (sitio oficial)"
+        >
+          Comprar Duendes Artesanales
+        </a>
       </div>
     </div>
   </header>
@@ -479,6 +565,14 @@
           <h3>Origen de los duendes (2013)</h3>
           <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong>. Frente a la masificación y distorsión actual, presentamos los DOIs y la evidencia pública de sus autores: Fito Girolami y Catalina Lucz-Ligeti.</p>
           <a class="cta" href="/origen-duendes-banos.html" style="margin-top: 20px;">Leer investigación completa</a>
+
+          <!-- ✅ NUEVO: microtexto + link contextual (branding + SEO de compra) -->
+          <p style="margin: 16px 0 0; font-size: .95rem; color: var(--text-muted);">
+            Si tu búsqueda es <strong>comprar duendes artesanales en Ecuador</strong>, consulta el catálogo oficial:
+            <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">
+              La Casa del Duende (catálogo + contacto directo)
+            </a>.
+          </p>
         </div>
         <div style="background: rgba(212, 175, 55, 0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center;">
            <p style="margin:0; font-size:1.1rem; font-style:italic; color: var(--gold); font-family: var(--font-display);">"La verdadera magia incomoda, porque tiene autor y memoria."</p>
@@ -540,7 +634,23 @@
               <li><strong>Termas Nocturnas:</strong> En la bruma, las figuras aparecen.</li>
               <li><strong>Aldea Mágica:</strong> El único espacio donde los duendes tienen autor, historia y sentido. Obra viva.</li>
             </ol>
+
+            <!-- ✅ NUEVO: mini-bloque “comprar duendes artesanales” sin romper estética -->
+            <div style="margin-top: 22px; padding: 18px 18px; border-radius: 14px; border: 1px solid rgba(212,175,55,0.18); background: rgba(212,175,55,0.06);">
+              <p style="margin:0 0 10px; color: var(--text-main); font-weight: 500;">
+                Comprar duendes artesanales (Ecuador)
+              </p>
+              <p style="margin:0 0 14px; color: var(--text-muted);">
+                Acceso directo al catálogo oficial de La Casa del Duende: piezas únicas, numeradas y con contexto cultural.
+              </p>
+              <a class="cta cta-buy"
+                 href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html"
+                 target="_blank" rel="noopener noreferrer">
+                 Ver catálogo oficial
+              </a>
+            </div>
           </div>
+
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center;">
              <h3 style="font-size: 4rem; color: var(--gold); margin-bottom: 0; line-height: 1;">3</h3>
              <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
@@ -632,6 +742,17 @@
               En esta misma página enlazamos una guía cultural en Medium y una conversación en TripAdvisor Ecuador, donde viajeros comparten listas de experiencias imperdibles.
             </div>
           </details>
+
+          <!-- ✅ NUEVO: FAQ visible (corta) para intención de compra -->
+          <details class="faq-item">
+            <summary>¿Dónde comprar duendes artesanales en Ecuador?</summary>
+            <div class="faq-body">
+              El acceso directo al catálogo y contacto oficial está en
+              <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">
+                La Casa del Duende
+              </a>.
+            </div>
+          </details>
         </div>
 
         <article class="card reveal" style="border-color: rgba(212,175,55,0.25); background: linear-gradient(180deg, var(--surface), rgba(212,175,55,0.06));">
@@ -657,6 +778,14 @@
         <br>
         <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">Zenodo: 18102230</a>
       </div>
+
+      <!-- ✅ NUEVO: Branding de compra (footer) -->
+      <div style="margin-top: 26px; font-size: 0.95rem; color: var(--text-muted);">
+        Comprar duendes artesanales:
+        <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">
+          catálogo oficial de La Casa del Duende
+        </a>.
+      </div>
     </div>
   </footer>
 
@@ -674,4 +803,3 @@
 
 </body>
 </html>
-
