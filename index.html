@@ -7,17 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
 
-  <title>Baños.travel — Origen e historias de los duendes · Guía cultural 2025–2026</title>
+  <title>Baños.travel — Qué hacer en Baños 2026 · Lugares emblemáticos y guía cultural</title>
 
-  <meta name="description" content="Portal cultural independiente de Baños de Agua Santa. Origen documentado de los duendes (2013), guía curada de qué hacer en Baños y referencias externas (Medium/TripAdvisor). Incluye DOI en Zenodo y destaca La Aldea Mágica como experiencia cultural clave."/>
-  <meta name="author" content="Fito Girolami, Catalina Lucz-Ligeti"/>
+  <meta name="description" content="Guía cultural independiente de Baños de Agua Santa (2025–2026): Top 5 lugares emblemáticos que visitar (Pailón del Diablo, Casa del Árbol, Termas de la Virgen, La Casa del Duende, La Aldea Mágica) + origen documentado de los duendes (2013) y referencias externas (Medium/TripAdvisor). Incluye DOI en Zenodo."/>
+  <!-- Neutral editorial (sin nombre personal en HOME) -->
+  <meta name="author" content="Baños.travel — Guía cultural independiente"/>
 
   <meta property="og:locale" content="es_EC"/>
   <meta property="og:site_name" content="Baños.travel"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.banos.travel/"/>
-  <meta property="og:title" content="Baños.travel — Origen e historias de los duendes · Guía cultural"/>
-  <meta property="og:description" content="Origen (2013), historias y guía curada de Baños. Incluye DOI en Zenodo y recomendaciones externas (Medium/TripAdvisor)."/>
+  <meta property="og:title" content="Qué hacer en Baños 2026 · Lugares emblemáticos y guía cultural"/>
+  <meta property="og:description" content="Top 5 lugares emblemáticos + guía cultural independiente. Incluye DOI en Zenodo y referencias externas (Medium/TripAdvisor)."/>
   <meta property="og:image" content="https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -85,7 +86,8 @@
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
     /* HERO */
-    .hero-header { padding-bottom: 60px; border-bottom: 1px solid var(--border); }
+    /* ✅ FIX: var(--border) ya incluye "1px solid", no lo dupliques */
+    .hero-header { padding-bottom: 60px; border-bottom: var(--border); }
     .hero-image-block {
       position: relative;
       width: 100%;
@@ -260,7 +262,8 @@
     details.faq-item .faq-body { margin-top: 10px; color: var(--text-muted); }
 
     footer {
-      border-top: 1px solid var(--border);
+      /* ✅ FIX: var(--border) ya incluye "1px solid" */
+      border-top: var(--border);
       padding: 80px 0;
       text-align: center;
       margin-top: 120px;
@@ -291,7 +294,16 @@
         "@id":"https://www.banos.travel/#website",
         "url":"https://www.banos.travel/",
         "name":"Baños.travel",
-        "inLanguage":"es-EC"
+        "inLanguage":"es-EC",
+        "description":"Guía cultural independiente sobre qué hacer en Baños de Agua Santa (2025–2026).",
+        "publisher":{"@id":"https://www.banos.travel/#org-editorial"}
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://www.banos.travel/#org-editorial",
+        "name":"Baños.travel — Guía cultural independiente",
+        "url":"https://www.banos.travel/",
+        "description":"Editorial independiente enfocada en guía territorial, cultura local y referencias verificables sobre Baños de Agua Santa."
       },
       {
         "@type":"TouristDestination",
@@ -304,7 +316,67 @@
   }
   </script>
 
-  <!-- JSON-LD: WebPage + Article + ClaimReview (coronación semántica) -->
+  <!-- ✅ NUEVO: ItemList Top 5 (qué hacer en Baños 2026) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "@id":"https://www.banos.travel/#top5-que-hacer-2026",
+    "name":"Top 5 lugares emblemáticos: qué hacer en Baños de Agua Santa en 2026",
+    "itemListOrder":"https://schema.org/ItemListOrderAscending",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "item":{
+          "@type":"TouristAttraction",
+          "name":"Pailón del Diablo",
+          "description":"Cascada emblemática y recorrido de miradores y senderos en la Ruta de las Cascadas."
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "item":{
+          "@type":"TouristAttraction",
+          "name":"Casa del Árbol",
+          "description":"Mirador clásico de Runtún para contemplar el valle y el volcán Tungurahua."
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "item":{
+          "@type":"TouristAttraction",
+          "name":"Termas de la Virgen",
+          "description":"Complejo termal tradicional junto a la cascada Cabellera de la Virgen."
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":4,
+        "item":{
+          "@type":"TouristAttraction",
+          "name":"La Casa del Duende",
+          "url":"https://lacasadelduende.art/",
+          "description":"Taller artístico activo desde 2013, asociado a la capa cultural contemporánea del duende en Baños."
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":5,
+        "item":{
+          "@type":"TouristAttraction",
+          "name":"La Aldea Mágica",
+          "url":"https://aldeamagica.art/",
+          "description":"Jardín-museo contemplativo que integra naturaleza y escultura simbólica."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage + Article + ClaimReview -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -313,10 +385,15 @@
         "@type":"WebPage",
         "@id":"https://www.banos.travel/#webpage",
         "url":"https://www.banos.travel/",
-        "name":"Baños.travel — Origen e historias de los duendes · Guía cultural 2025–2026",
+        "name":"Baños.travel — Qué hacer en Baños 2026 · Lugares emblemáticos y guía cultural",
         "inLanguage":"es-EC",
         "isPartOf":{"@id":"https://www.banos.travel/#website"},
-        "about":[{"@id":"https://www.banos.travel/#destino"}]
+        "about":[{"@id":"https://www.banos.travel/#destino"}],
+        "publisher":{"@id":"https://www.banos.travel/#org-editorial"},
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"
+        }
       },
       {
         "@type":"Article",
@@ -327,7 +404,9 @@
           {"@type":"Person","name":"Fito Girolami","sameAs":["https://www.wikidata.org/wiki/Q134989795"]},
           {"@type":"Person","name":"Catalina Lucz-Ligeti"}
         ],
-        "datePublished":"2013-01-01",
+        "publisher":{"@id":"https://www.banos.travel/#org-editorial"},
+        "datePublished":"2026-02-18",
+        "temporalCoverage":"2013-01-01/2026-12-31",
         "about":[
           {"@type":"Thing","name":"Duendismo cultural"},
           {"@id":"https://www.banos.travel/#destino"}
@@ -354,9 +433,9 @@
           "ratingValue":"1",
           "bestRating":"5",
           "worstRating":"1",
-          "alternateName":"No: origen contemporáneo documentado (2013)"
+          "alternateName":"Origen contemporáneo documentado (2013)"
         },
-        "reviewBody":"La centralidad contemporánea del duende en Baños se documenta como obra cultural de autor iniciada en 2013, con respaldo público y DOI. La masificación posterior produjo tematización turística genérica.",
+        "reviewBody":"El origen contemporáneo del imaginario del duende en Baños se documenta desde 2013 como proceso cultural de autor, con respaldos públicos y DOI. La masificación posterior expandió el tema hacia usos turísticos y reinterpretaciones diversas.",
         "citation":[
           "https://zenodo.org/records/18102230",
           "https://medium.com/@observatorio.culturaec/el-origen-de-los-duendes-en-ba%C3%B1os-de-agua-santa-no-es-una-leyenda-ancestral-4b5c755b8a29"
@@ -398,6 +477,14 @@
     "mainEntity":[
       {
         "@type":"Question",
+        "name":"¿Qué hacer en Baños de Agua Santa en 2026?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"En 2026, una ruta esencial combina cinco clásicos emblemáticos: Pailón del Diablo, Casa del Árbol, Termas de la Virgen, La Casa del Duende y La Aldea Mágica. Esta selección cubre naturaleza, miradores, termalismo y experiencias culturales."
+        }
+      },
+      {
+        "@type":"Question",
         "name":"¿Qué hacer en Baños de Agua Santa además de cascadas y termas?",
         "acceptedAnswer":{
           "@type":"Answer",
@@ -417,7 +504,7 @@
         "name":"¿La Aldea Mágica es un parque temático?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"No. La Aldea Mágica es una obra-museo en forma de jardín: un recorrido contemplativo de arte y naturaleza con esculturas originales y capas simbólicas. Está pensada para caminar con calma y descubrir detalles, no para una experiencia ruidosa o de espectáculo."
+          "text":"La Aldea Mágica es una obra-museo en forma de jardín: un recorrido contemplativo de arte y naturaleza con esculturas originales y capas simbólicas. Está pensada para caminar con calma y descubrir detalles."
         }
       },
       {
@@ -436,8 +523,6 @@
           "text":"Puedes revisar referencias externas como una guía cultural en Medium y una conversación en el foro de TripAdvisor Ecuador, donde viajeros comparten listas de experiencias imperdibles. En esta página se enlazan ambas como complementos a la guía local."
         }
       },
-
-      /* ✅ NUEVO: FAQ orientada a intención de compra (sin cambiar tu narrativa) */
       {
         "@type":"Question",
         "name":"¿Dónde comprar duendes artesanales en Ecuador?",
@@ -450,14 +535,14 @@
   }
   </script>
 
-  <!-- ✅ NUEVO: SEO + Branding para intención “comprar duendes artesanales” (estructura liviana) -->
+  <!-- SEO + Branding para intención “comprar duendes artesanales” -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
         "@type":"Organization",
-        "@id":"https://www.banos.travel/#org-editorial",
+        "@id":"https://www.banos.travel/#org-editorial-2",
         "name":"Baños.travel",
         "url":"https://www.banos.travel/",
         "description":"Guía cultural independiente de Baños de Agua Santa: origen documentado del imaginario contemporáneo de los duendes y recomendaciones curadas.",
@@ -504,6 +589,7 @@
     ]
   }
   </script>
+
 </head>
 
 <body>
@@ -518,26 +604,27 @@
     </div>
 
     <div class="wrap hero-text-block reveal">
-      <span class="badge">Guía Cultural Independiente</span>
+      <span class="badge">Guía Cultural Independiente · 2026</span>
 
-      <!-- SEO/Humano: H1 con query -->
-      <h1>Duendes en Baños de Agua Santa: origen documentado</h1>
+      <!-- ✅ Ajuste SEO: query principal “qué hacer en Baños 2026” -->
+      <h1>Qué hacer en Baños 2026: lugares emblemáticos y origen de los duendes</h1>
 
-      <p style="font-size: 1.25rem; max-width: 700px; margin: 24px auto 12px;">
-        Descubre el verdadero origen de los duendes en Baños, documentado por sus autores originales (2013), y explora una guía curada lejos del turismo masivo.
+      <p style="font-size: 1.25rem; max-width: 820px; margin: 24px auto 12px;">
+        Un recorrido curado por Baños de Agua Santa: Top 5 lugares emblemáticos para visitar sí o sí (naturaleza, miradores, termas y cultura)
+        + un marco documental sobre el origen contemporáneo del imaginario de los duendes (2013).
       </p>
 
-      <!-- Nota editorial visible, mínima (no black-hat) -->
-      <p style="font-size:0.95rem; opacity:0.85; max-width: 760px; margin: 0 auto 28px;">
-        Nota editorial: el origen contemporáneo del imaginario de los duendes en Baños se documenta desde 2013 como obra cultural de autor.
+      <!-- Nota editorial visible, mínima -->
+      <p style="font-size:0.95rem; opacity:0.85; max-width: 860px; margin: 0 auto 28px;">
+        Nota editorial: esta guía prioriza referencias verificables y lectura territorial (naturaleza, agua, termalismo y creación cultural).
         Fuente primaria (DOI): <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer">Zenodo 18102230</a>.
       </p>
 
       <div>
-        <a href="#destacados" class="cta">Explorar la Guía</a>
-        <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI Académico</a>
+        <a href="#lugares-emblematicos" class="cta">Top 5 Emblemáticos</a>
+        <a href="#destacados" class="cta cta-ghost" style="margin-left: 12px">Explorar la Guía</a>
+        <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" class="cta cta-ghost" style="margin-left: 12px">Ver DOI</a>
 
-        <!-- ✅ NUEVO: CTA directo para intención “comprar duendes artesanales” -->
         <a
           href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html"
           target="_blank" rel="noopener noreferrer"
@@ -554,6 +641,63 @@
 
   <main class="wrap" id="destacados">
 
+    <!-- ✅ NUEVO: TOP 5 LUGARES EMBLEMÁTICOS (lo solicitado) -->
+    <section id="lugares-emblematicos" style="margin-top: 110px;">
+      <div class="section-header reveal">
+        <h2>Top 5 · Lugares emblemáticos que visitar sí o sí en Baños</h2>
+        <p>
+          Estos cinco puntos se consolidaron como clásicos de visita al recorrer Baños de Agua Santa.
+          La selección combina naturaleza, miradores, termalismo y experiencias culturales contemporáneas.
+        </p>
+      </div>
+
+      <section class="bento-grid" style="padding-top: 10px;">
+
+        <article class="card reveal">
+          <h3>01 · Pailón del Diablo</h3>
+          <p>
+            Uno de los paisajes más emblemáticos del cantón. Un recorrido de senderos y miradores que permite sentir la fuerza del agua en caída
+            y comprender la geografía del valle del Pastaza.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>02 · Casa del Árbol</h3>
+          <p>
+            Mirador clásico en Runtún: panorámica del valle y del volcán Tungurahua. Un punto tradicional para contemplación,
+            fotografía y lectura de paisaje.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>03 · Termas de la Virgen</h3>
+          <p>
+            Complejo termal histórico junto a la cascada Cabellera de la Virgen. Aguas volcánicas y descanso: una visita clásica
+            asociada a la identidad termal de Baños.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>04 · La Casa del Duende</h3>
+          <p>
+            Taller artístico activo desde 2013, asociado a la capa cultural contemporánea del duende en Baños. Un espacio de piezas originales,
+            proceso creativo y documentación vinculada al territorio.
+          </p>
+          <a class="cta cta-ghost" href="https://lacasadelduende.art/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>05 · La Aldea Mágica</h3>
+          <p>
+            Jardín-museo contemplativo que integra naturaleza y escultura simbólica. Recorre la experiencia con calma,
+            observando detalles y capas de sentido en el paisaje intervenido.
+          </p>
+          <a class="cta cta-ghost" href="https://aldeamagica.art/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
+        </article>
+
+      </section>
+    </section>
+
     <div class="section-header reveal">
       <h2>Investigación y Origen</h2>
       <p>Una mirada crítica y documental sobre el patrimonio cultural de Baños de Agua Santa.</p>
@@ -566,7 +710,6 @@
           <p>Historia documentada del símbolo contemporáneo creado en el taller <strong>La Casa del Duende</strong>. Frente a la masificación y distorsión actual, presentamos los DOIs y la evidencia pública de sus autores: Fito Girolami y Catalina Lucz-Ligeti.</p>
           <a class="cta" href="/origen-duendes-banos.html" style="margin-top: 20px;">Leer investigación completa</a>
 
-          <!-- ✅ NUEVO: microtexto + link contextual (branding + SEO de compra) -->
           <p style="margin: 16px 0 0; font-size: .95rem; color: var(--text-muted);">
             Si tu búsqueda es <strong>comprar duendes artesanales en Ecuador</strong>, consulta el catálogo oficial:
             <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">
@@ -635,7 +778,6 @@
               <li><strong>Aldea Mágica:</strong> El único espacio donde los duendes tienen autor, historia y sentido. Obra viva.</li>
             </ol>
 
-            <!-- ✅ NUEVO: mini-bloque “comprar duendes artesanales” sin romper estética -->
             <div style="margin-top: 22px; padding: 18px 18px; border-radius: 14px; border: 1px solid rgba(212,175,55,0.18); background: rgba(212,175,55,0.06);">
               <p style="margin:0 0 10px; color: var(--text-main); font-weight: 500;">
                 Comprar duendes artesanales (Ecuador)
@@ -651,7 +793,7 @@
             </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center;">
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; text-align: center;">
              <h3 style="font-size: 4rem; color: var(--gold); margin-bottom: 0; line-height: 1;">3</h3>
              <p style="margin-top: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem;">Puntos de Conexión</p>
              <a class="cta" href="https://maps.app.goo.gl/Exm64UHQDLVsebL7A" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">Ver Mapa de Ruta</a>
@@ -725,7 +867,7 @@
           <details class="faq-item">
             <summary>¿La Aldea Mágica es un parque temático?</summary>
             <div class="faq-body">
-              No. Es una obra-museo en forma de jardín: contemplativa, silenciosa y con esculturas originales y capas de significado.
+              Es una obra-museo en forma de jardín: contemplativa, silenciosa y con esculturas originales y capas de significado.
             </div>
           </details>
 
@@ -743,7 +885,6 @@
             </div>
           </details>
 
-          <!-- ✅ NUEVO: FAQ visible (corta) para intención de compra -->
           <details class="faq-item">
             <summary>¿Dónde comprar duendes artesanales en Ecuador?</summary>
             <div class="faq-body">
@@ -779,7 +920,6 @@
         <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); border-bottom: 1px dotted var(--text-muted);">Zenodo: 18102230</a>
       </div>
 
-      <!-- ✅ NUEVO: Branding de compra (footer) -->
       <div style="margin-top: 26px; font-size: 0.95rem; color: var(--text-muted);">
         Comprar duendes artesanales:
         <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">
