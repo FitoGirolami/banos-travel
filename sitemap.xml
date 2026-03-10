@@ -52,6 +52,14 @@
     <priority>0.84</priority>
   </url>
 
+  <!-- Qué son los duendes en Baños -->
+  <url>
+    <loc>https://www.banos.travel/que-son-los-duendes-en-banos/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+
   <!-- Duendes en Baños -->
   <url>
     <loc>https://www.banos.travel/duendes-en-banos-ecuador/</loc>
