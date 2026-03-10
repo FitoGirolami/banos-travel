@@ -16,7 +16,7 @@
     </image:image>
   </url>
 
-  <!-- Qué hacer en Baños (guía principal de turismo) -->
+  <!-- Guía principal -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-ecuador/</loc>
     <lastmod>2026-03-10</lastmod>
@@ -26,6 +26,54 @@
       <image:loc>https://www.banos.travel/static/og/que-hacer-banos.jpg</image:loc>
       <image:title>Qué hacer en Baños Ecuador</image:title>
     </image:image>
+  </url>
+
+  <!-- Qué hacer si llueve -->
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-cuando-llueve/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
+  <!-- Cuántos días en Baños -->
+  <url>
+    <loc>https://www.banos.travel/cuantos-dias-en-banos/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Baños más allá de la aventura -->
+  <url>
+    <loc>https://www.banos.travel/banos-mas-alla-de-la-aventura/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+
+  <!-- Duendes en Baños -->
+  <url>
+    <loc>https://www.banos.travel/duendes-en-banos-ecuador/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- La Aldea Mágica -->
+  <url>
+    <loc>https://www.banos.travel/aldea-magica-banos/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.83</priority>
+  </url>
+
+  <!-- La Casa del Duende -->
+  <url>
+    <loc>https://www.banos.travel/la-casa-del-duende-banos/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.87</priority>
   </url>
 
   <!-- Origen de los duendes -->
