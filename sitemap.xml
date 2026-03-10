@@ -4,15 +4,31 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  <!-- Home (actualizada) -->
+  <!-- Home -->
   <url>
     <loc>https://www.banos.travel/</loc>
-    <lastmod>2025-12-30</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg</image:loc>
+      <image:title>Baños de Agua Santa Ecuador</image:title>
+    </image:image>
   </url>
 
-  <!-- Origen de los duendes (página fundacional, NO editada) -->
+  <!-- Qué hacer en Baños (guía principal de turismo) -->
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-ecuador/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://www.banos.travel/static/og/que-hacer-banos.jpg</image:loc>
+      <image:title>Qué hacer en Baños Ecuador</image:title>
+    </image:image>
+  </url>
+
+  <!-- Origen de los duendes -->
   <url>
     <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
     <lastmod>2025-08-27</lastmod>
@@ -24,7 +40,7 @@
     </image:image>
   </url>
 
-  <!-- Historias de los duendes (NO editada) -->
+  <!-- Historias de los duendes -->
   <url>
     <loc>https://www.banos.travel/historias-duendes-banos-ecuador.html</loc>
     <lastmod>2025-08-27</lastmod>
@@ -36,7 +52,7 @@
     </image:image>
   </url>
 
-  <!-- Duendes mágicos en Ecuador -->
+  <!-- Duendes mágicos -->
   <url>
     <loc>https://www.banos.travel/duendes-magicos-ecuador.html</loc>
     <lastmod>2025-12-04</lastmod>
@@ -44,19 +60,7 @@
     <priority>0.88</priority>
     <image:image>
       <image:loc>https://www.banos.travel/static/og/duendes-magicos-ecuador.jpg</image:loc>
-      <image:title>Duendes mágicos en Ecuador — Inicio del mito</image:title>
-    </image:image>
-  </url>
-
-  <!-- Qué hacer en Baños -->
-  <url>
-    <loc>https://www.banos.travel/que-hacer-en-banos-ecuador.html</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://www.banos.travel/static/og/que-hacer-banos.jpg</image:loc>
-      <image:title>Qué hacer en Baños</image:title>
+      <image:title>Duendes mágicos en Ecuador</image:title>
     </image:image>
   </url>
 
