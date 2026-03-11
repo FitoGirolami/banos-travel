@@ -7,26 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
 
-  <title>Qué hacer en Baños Ecuador 2026 | Lugares emblemáticos, duendes y guía cultural</title>
+  <title>Qué hacer en Baños Ecuador 2026 | Cascadas, termas, cultura, duendes y guía completa</title>
 
-  <meta name="description" content="Descubre qué hacer en Baños de Agua Santa, Ecuador: cascadas, termas, miradores, cultura, duendes y lugares recomendados como La Aldea Mágica y La Casa del Duende. Guía cultural independiente 2026."/>
-  <meta name="keywords" content="qué hacer en Baños Ecuador, Baños de Agua Santa, turismo en Baños, lugares emblemáticos de Baños, duendes en Baños, La Aldea Mágica, La Casa del Duende, Pailón del Diablo, Casa del Árbol, Termas de la Virgen"/>
+  <meta name="description" content="Descubre qué hacer en Baños de Agua Santa, Ecuador en 2026: cascadas, termas, miradores, gastronomía, cultura, duendes y experiencias recomendadas como La Aldea Mágica y La Casa del Duende. Guía cultural independiente y completa."/>
+  <meta name="keywords" content="qué hacer en Baños Ecuador, Baños de Agua Santa, turismo en Baños, lugares emblemáticos de Baños, cascadas de Baños, termas de Baños, Casa del Árbol, Pailón del Diablo, duendes en Baños, La Casa del Duende, La Aldea Mágica, guía de Baños Ecuador"/>
   <meta name="author" content="Baños.travel — Guía cultural independiente"/>
 
   <meta property="og:locale" content="es_EC"/>
   <meta property="og:site_name" content="Baños.travel"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.banos.travel/"/>
-  <meta property="og:title" content="Qué hacer en Baños Ecuador 2026 | Lugares emblemáticos, duendes y guía cultural"/>
-  <meta property="og:description" content="Guía cultural independiente de Baños de Agua Santa: cascadas, termas, lugares emblemáticos, preguntas frecuentes y experiencias recomendadas como La Aldea Mágica y La Casa del Duende."/>
+  <meta property="og:title" content="Qué hacer en Baños Ecuador 2026 | Cascadas, termas, cultura, duendes y guía completa"/>
+  <meta property="og:description" content="Guía cultural independiente de Baños de Agua Santa: cascadas, termas, miradores, preguntas frecuentes y experiencias recomendadas como La Aldea Mágica y La Casa del Duende."/>
   <meta property="og:image" content="https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:image:alt" content="Paisaje simbólico de Baños de Agua Santa con estética alternativa"/>
+  <meta property="og:image:alt" content="Paisaje de Baños de Agua Santa con cascadas, montaña y atmósfera cultural alternativa"/>
 
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Qué hacer en Baños Ecuador 2026 | Lugares emblemáticos, duendes y guía cultural"/>
-  <meta name="twitter:description" content="Cascadas, termas, cultura, preguntas frecuentes y experiencias recomendadas en Baños de Agua Santa, Ecuador."/>
+  <meta name="twitter:title" content="Qué hacer en Baños Ecuador 2026 | Cascadas, termas, cultura, duendes y guía completa"/>
+  <meta name="twitter:description" content="Cascadas, termas, miradores, gastronomía, cultura y experiencias recomendadas en Baños de Agua Santa, Ecuador."/>
   <meta name="twitter:image" content="https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"/>
 
   <meta name="geo.position" content="-1.392255;-78.419648">
@@ -39,7 +39,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -57,6 +57,7 @@
       --shadow: 0 30px 60px -12px rgba(0,0,0,0.6);
       --font-display: 'Cinzel', serif;
       --font-body: 'Poppins', sans-serif;
+      --maxw: 1300px;
     }
 
     * { box-sizing: border-box; }
@@ -84,13 +85,70 @@
 
     h1 { font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1; color: var(--gold); margin-bottom: 1.5rem; }
     h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1.2rem; color: var(--gold); }
-    h3 { font-size: 1.4rem; color: var(--gold-light); margin-bottom: 1rem; }
+    h3 { font-size: 1.35rem; color: var(--gold-light); margin-bottom: 1rem; }
     p { margin-bottom: 1.5rem; color: var(--text-muted); font-weight: 300; font-size: 1.05rem; }
+
+    strong { color: #fff; font-weight: 600; }
 
     a { color: var(--gold); text-decoration: none; transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
     a:not(.cta):hover { color: var(--gold-light); }
 
-    .wrap { max-width: 1300px; margin: 0 auto; padding: 0 32px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+    .skip-link:focus {
+      left: 20px;
+      top: 20px;
+      z-index: 9999;
+      background: #fff;
+      color: #000;
+      padding: 12px 16px;
+      border-radius: 10px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(18px);
+      background: rgba(9,12,11,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .topbar-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      color: var(--gold);
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .topnav a {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      opacity: 0.9;
+    }
 
     .hero-header { position: relative; padding-bottom: 120px; }
     .hero-image-block {
@@ -141,11 +199,97 @@
       margin-bottom: 32px;
     }
 
+    .hero-intro {
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .mini-pills {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .mini-pills span {
+      display: inline-flex;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: var(--text-main);
+      font-size: 0.88rem;
+    }
+
+    .cta-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 34px;
+      border-radius: 14px;
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      min-height: 54px;
+    }
+
+    .cta:hover {
+      transform: translateY(-4px);
+      filter: brightness(1.1);
+      box-shadow: 0 15px 30px rgba(197, 163, 93, 0.3);
+    }
+
+    .cta-ghost {
+      background: transparent;
+      border: 1px solid rgba(197, 163, 93, 0.5);
+      color: var(--gold);
+      box-shadow: none;
+    }
+
+    .cta-ghost:hover {
+      border-color: var(--gold);
+      background: rgba(197, 163, 93, 0.08);
+    }
+
+    .cta-buy {
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      color: #fff;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 900px;
+      margin: 140px auto 60px;
+    }
+
+    .section-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
     .bento-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 32px;
-      padding: 40px 0;
+      padding: 20px 0 10px;
     }
 
     .card {
@@ -153,12 +297,13 @@
       backdrop-filter: blur(12px);
       border: var(--border);
       border-radius: var(--radius);
-      padding: 40px;
+      padding: 34px;
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow: hidden;
     }
 
     .card:hover {
@@ -172,148 +317,37 @@
       grid-column: 1 / -1;
       background: linear-gradient(145deg, rgba(22, 28, 25, 0.95) 0%, rgba(14, 18, 16, 1) 100%);
       border-color: var(--gold);
-      padding: 60px;
+      padding: 52px;
     }
 
     @media (min-width: 1024px) {
       .card.featured {
         display: grid;
-        grid-template-columns: 1.4fr 1fr;
-        gap: 60px;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 54px;
       }
     }
 
-    .cta-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 18px 40px;
-      border-radius: 14px;
-      background: var(--gold);
-      color: var(--bg);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .cta:hover {
-      transform: translateY(-4px);
-      filter: brightness(1.1);
-      box-shadow: 0 15px 30px rgba(197, 163, 93, 0.3);
-    }
-
-    .cta-ghost {
-      background: transparent;
-      border: 1px solid rgba(197, 163, 93, 0.5);
-      color: var(--gold);
-    }
-    .cta-ghost:hover {
-      border-color: var(--gold);
-      background: rgba(197, 163, 93, 0.08);
-    }
-
-    .cta-buy {
-      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-      color: #fff;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 850px;
-      margin: 140px auto 60px;
-    }
-
-    .section-kicker {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--gold-light);
-      margin-bottom: 10px;
-      display: inline-block;
-    }
-
-    ol.rustic-list {
-      list-style: none;
-      counter-reset: my-counter;
-      padding: 0;
-    }
-
-    ol.rustic-list li {
-      counter-increment: my-counter;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 24px 32px;
-      border-radius: 18px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      transition: 0.3s ease;
-    }
-
-    ol.rustic-list li:hover {
-      background: rgba(197, 163, 93, 0.06);
-      border-color: rgba(197, 163, 93, 0.2);
-    }
-
-    ol.rustic-list li::before {
-      content: counter(my-counter, decimal-leading-zero);
-      font-family: var(--font-display);
-      color: var(--gold);
-      font-size: 1.6rem;
-      margin-right: 28px;
-      opacity: 0.7;
-    }
-
-    details.faq-item {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 24px 28px;
-      margin-bottom: 16px;
-      transition: 0.3s;
-    }
-    details.faq-item[open] {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(197, 163, 93, 0.2);
-    }
-    details.faq-item summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 600;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      outline: none;
-    }
-    details.faq-item summary::after {
-      content: '+';
-      font-size: 1.5rem;
-      color: var(--gold);
-      transition: transform 0.4s;
-    }
-    details.faq-item[open] summary::after { transform: rotate(45deg); }
-
-    .faq-body {
-      padding-top: 15px;
-      color: var(--text-muted);
-    }
-
-    .note-panel {
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
       margin-top: 30px;
-      padding: 24px;
-      border-radius: 16px;
-      background: rgba(197,163,93,0.06);
-      border-left: 4px solid var(--gold);
+    }
+
+    .stat-box {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 6px;
     }
 
     .subtle-grid {
@@ -330,12 +364,142 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
 
+    .subtle-box p:last-child,
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .text-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+      margin-top: 28px;
+    }
+
+    .info-strip {
+      margin-top: 26px;
+      padding: 18px 22px;
+      border-radius: 18px;
+      background: rgba(197,163,93,0.06);
+      border-left: 4px solid var(--gold);
+    }
+
+    .note-panel {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(197,163,93,0.06);
+      border-left: 4px solid var(--gold);
+    }
+
+    .editorial-list,
+    .route-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .editorial-list li,
+    .route-list li {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 20px 22px;
+      border-radius: 18px;
+      margin-bottom: 14px;
+    }
+
+    ol.rustic-list {
+      list-style: none;
+      counter-reset: my-counter;
+      padding: 0;
+      margin: 0;
+    }
+
+    ol.rustic-list li {
+      counter-increment: my-counter;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px 32px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: 0.3s ease;
+      gap: 20px;
+    }
+
+    ol.rustic-list li:hover {
+      background: rgba(197, 163, 93, 0.06);
+      border-color: rgba(197, 163, 93, 0.2);
+    }
+
+    ol.rustic-list li::before {
+      content: counter(my-counter, decimal-leading-zero);
+      font-family: var(--font-display);
+      color: var(--gold);
+      font-size: 1.6rem;
+      opacity: 0.7;
+      line-height: 1;
+      margin-top: 4px;
+      min-width: 44px;
+    }
+
+    details.faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      transition: 0.3s;
+    }
+
+    details.faq-item[open] {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(197, 163, 93, 0.2);
+    }
+
+    details.faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+      gap: 20px;
+    }
+
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--gold);
+      transition: transform 0.4s;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+
+    .faq-body {
+      padding-top: 15px;
+      color: var(--text-muted);
+    }
+
     footer {
       background: #050706;
       padding: 120px 0 80px;
       margin-top: 160px;
       border-top: var(--border);
       text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 26px 0 0;
     }
 
     @keyframes breathe {
@@ -348,18 +512,28 @@
       transform: translateY(40px);
       transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
 
+    @media (max-width: 1024px) {
+      .text-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       .wrap { padding: 0 24px; }
+      .topbar-inner { padding: 14px 24px; flex-direction: column; align-items: flex-start; }
       .hero-text-block { margin-top: -120px; padding: 40px 20px; }
       h1 { font-size: 2.5rem; }
       .section-header { margin: 80px auto 40px; }
-      .card.featured { padding: 40px 20px; }
+      .card.featured { padding: 36px 20px; }
       .cta-container { flex-direction: column; align-items: center; }
+      .topnav { gap: 12px; }
+      ol.rustic-list li { padding: 22px 20px; }
     }
   </style>
 
@@ -373,28 +547,37 @@
         "url":"https://www.banos.travel/",
         "name":"Baños.travel",
         "inLanguage":"es-EC",
-        "description":"Guía cultural independiente sobre qué hacer en Baños de Agua Santa (2025–2026).",
-        "publisher":{"@id":"https://www.banos.travel/#org-editorial"}
+        "description":"Guía cultural independiente sobre qué hacer en Baños de Agua Santa, Ecuador.",
+        "publisher":{"@id":"https://www.banos.travel/#org-editorial"},
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://www.banos.travel/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
       },
       {
         "@type":"Organization",
         "@id":"https://www.banos.travel/#org-editorial",
         "name":"Baños.travel — Guía cultural independiente",
         "url":"https://www.banos.travel/",
-        "description":"Editorial independiente enfocada en cultura local y referencias verificables sobre Baños."
+        "description":"Editorial independiente enfocada en cultura local, turismo y referencias verificables sobre Baños de Agua Santa.",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://www.banos.travel/favicon.png"
+        }
       },
       {
         "@type":"TouristDestination",
         "@id":"https://www.banos.travel/#destino",
         "name":"Baños de Agua Santa",
-        "description":"Destino andino de agua, cascadas, termalismo y experiencias culturales.",
-        "touristType":["Naturaleza","Termalismo","Cultura","Aventura"]
+        "description":"Destino andino de cascadas, termalismo, montaña, gastronomía, aventura y experiencias culturales contemporáneas.",
+        "touristType":["Naturaleza","Termalismo","Cultura","Aventura","Escapadas"]
       },
       {
         "@type":"WebPage",
         "@id":"https://www.banos.travel/#webpage",
         "url":"https://www.banos.travel/",
-        "name":"Qué hacer en Baños Ecuador 2026 | Lugares emblemáticos, duendes y guía cultural",
+        "name":"Qué hacer en Baños Ecuador 2026 | Cascadas, termas, cultura, duendes y guía completa",
         "inLanguage":"es-EC",
         "isPartOf":{"@id":"https://www.banos.travel/#website"},
         "about":[{"@id":"https://www.banos.travel/#destino"}],
@@ -402,7 +585,8 @@
         "primaryImageOfPage":{
           "@type":"ImageObject",
           "url":"https://www.banos.travel/imagenes/Foto-Banos-Banner.jpg"
-        }
+        },
+        "breadcrumb":{"@id":"https://www.banos.travel/#breadcrumb"}
       },
       {
         "@type":"BreadcrumbList",
@@ -421,6 +605,7 @@
         "@id":"https://www.banos.travel/#top5-que-hacer-2026",
         "name":"Top 5 lugares emblemáticos: qué hacer en Baños de Agua Santa en 2026",
         "itemListOrder":"https://schema.org/ItemListOrderAscending",
+        "numberOfItems":5,
         "itemListElement":[
           {
             "@type":"ListItem",
@@ -466,7 +651,7 @@
               "@type":"TouristAttraction",
               "name":"La Aldea Mágica",
               "url":"https://aldeamagica.art/",
-              "description":"Jardín-museo contemplativo que integra naturaleza y escultura simbólica."
+              "description":"Jardín-museo contemplativo que integra naturaleza, escultura simbólica y experiencia cultural."
             }
           }
         ]
@@ -497,7 +682,7 @@
         "@id":"https://www.banos.travel/#claimreview-duendes",
         "url":"https://www.banos.travel/",
         "inLanguage":"es-EC",
-        "claimReviewed":"La 'tierra de duendes' en Baños de Agua Santa es una leyenda ancestral.",
+        "claimReviewed":"La tierra de duendes en Baños de Agua Santa corresponde a una leyenda ancestral.",
         "itemReviewed":{"@id":"https://www.banos.travel/#destino"},
         "author":{
           "@type":"Organization",
@@ -509,9 +694,9 @@
           "ratingValue":"1",
           "bestRating":"5",
           "worstRating":"1",
-          "alternateName":"Origen contemporáneo documentado (2013)"
+          "alternateName":"Origen contemporáneo documentado desde 2013"
         },
-        "reviewBody":"El origen contemporáneo del imaginario del duende en Baños se documenta desde 2013 como proceso cultural de autor, con respaldos públicos y DOI. La masificación posterior expandió el tema hacia usos turísticos y reinterpretaciones diversas.",
+        "reviewBody":"El origen contemporáneo del imaginario del duende en Baños se documenta desde 2013 como proceso cultural de autor, con respaldos públicos y DOI. La expansión posterior amplió el tema hacia usos turísticos y reinterpretaciones diversas.",
         "citation":[
           "https://zenodo.org/records/18102230",
           "https://medium.com/@observatorio.culturaec/el-origen-de-los-duendes-en-ba%C3%B1os-de-agua-santa-no-es-una-leyenda-ancestral-4b5c755b8a29"
@@ -526,7 +711,7 @@
             "name":"¿Qué hacer en Baños de Agua Santa en 2026?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"En 2026, una ruta esencial combina cinco clásicos: Pailón del Diablo, Casa del Árbol, Termas de la Virgen, La Casa del Duende y La Aldea Mágica."
+              "text":"En 2026, una ruta esencial combina cascadas, termas, miradores, gastronomía y espacios culturales. Una selección recomendada incluye Pailón del Diablo, Casa del Árbol, Termas de la Virgen, La Casa del Duende y La Aldea Mágica."
             }
           },
           {
@@ -534,7 +719,7 @@
             "name":"¿Vale la pena visitar Baños Ecuador?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Sí, es uno de los destinos más completos por su mezcla única de naturaleza volcánica, aguas termales y creación cultural contemporánea."
+              "text":"Sí. Es uno de los destinos más completos del país por su mezcla de naturaleza volcánica, aguas termales, miradores, aventura y experiencias culturales contemporáneas."
             }
           },
           {
@@ -542,7 +727,7 @@
             "name":"¿Dónde ver duendes en Baños Ecuador?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Los espacios más valorados para conocer este imaginario con rigor artístico y sentido territorial son La Aldea Mágica y La Casa del Duende."
+              "text":"Los espacios más asociados a este imaginario con enfoque artístico y territorial son La Aldea Mágica y La Casa del Duende."
             }
           },
           {
@@ -550,7 +735,7 @@
             "name":"¿Cuántos días se necesitan para conocer Baños?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Lo ideal es dedicar entre 2 y 3 días para recorrer cascadas, termas, miradores y experiencias culturales."
+              "text":"Lo ideal es dedicar entre 2 y 3 días para recorrer cascadas, termas, miradores y experiencias culturales con más tranquilidad."
             }
           },
           {
@@ -558,7 +743,15 @@
             "name":"¿Qué hacer en Baños además de cascadas y aventura?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Además de cascadas y deportes extremos, Baños ofrece aguas termales, gastronomía local, mercados, miradores y espacios con identidad cultural como La Aldea Mágica y La Casa del Duende."
+              "text":"Además de cascadas y deportes, Baños ofrece aguas termales, gastronomía local, mercados, caminatas, miradores y espacios de identidad cultural como La Aldea Mágica y La Casa del Duende."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"¿Dónde comprar duendes artesanales en Ecuador?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"El catálogo oficial de piezas de autor vinculadas a La Casa del Duende se encuentra en su sitio oficial."
             }
           }
         ]
@@ -566,19 +759,19 @@
       {
         "@type":"ItemList",
         "@id":"https://www.banos.travel/#recursos-externos",
-        "name":"Recomendaciones externas de viajeros sobre qué hacer en Baños de Agua Santa",
+        "name":"Recomendaciones externas sobre qué hacer en Baños de Agua Santa",
         "itemListOrder":"https://schema.org/ItemListUnordered",
         "itemListElement":[
           {
             "@type":"ListItem",
             "position":1,
-            "name":"Guía cultural 2025 en Medium: Las 10 experiencias imperdibles de Baños",
+            "name":"Guía cultural en Medium: Las 10 experiencias imperdibles de Baños",
             "url":"https://medium.com/@lacasadelduende/las-10-experiencias-imperdibles-de-ba%C3%B1os-de-agua-santa-en-2025-775d09c71df8"
           },
           {
             "@type":"ListItem",
             "position":2,
-            "name":"Foro TripAdvisor Ecuador: Recomendación — 10 experiencias imperdibles en Baños 2026",
+            "name":"Foro TripAdvisor Ecuador: Recomendación sobre experiencias imperdibles en Baños",
             "url":"https://www.tripadvisor.com.ar/ShowTopic-g294307-i2253-k15469486-Recomendacion_las_10_experiencias_imperdibles_en_Banos_2026-Ecuador.html"
           }
         ]
@@ -594,6 +787,12 @@
         ]
       },
       {
+        "@type":"Organization",
+        "@id":"https://aldeamagica.art/#org",
+        "name":"La Aldea Mágica",
+        "url":"https://aldeamagica.art/"
+      },
+      {
         "@type":"OfferCatalog",
         "@id":"https://www.banos.travel/#catalogo-duendes",
         "name":"Catálogo — Comprar duendes artesanales en Ecuador",
@@ -601,7 +800,7 @@
         "itemListElement":[
           {
             "@type":"Offer",
-            "name":"Duendes artesanales (piezas únicas y numeradas)",
+            "name":"Duendes artesanales, piezas únicas y numeradas",
             "url":"https://lacasadelduende.art/comprar-duendes-en-ecuador.html",
             "seller":{"@id":"https://lacasadelduende.art/#org"},
             "availability":"https://schema.org/InStock"
@@ -614,71 +813,179 @@
 </head>
 
 <body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <div class="topbar" role="navigation" aria-label="Navegación principal">
+    <div class="topbar-inner">
+      <div class="brand">Baños.travel</div>
+      <nav class="topnav">
+        <a href="#lugares-emblematicos">Top lugares</a>
+        <a href="#guia-completa">Guía completa</a>
+        <a href="#investigacion">Origen de los duendes</a>
+        <a href="#preguntas-viajeros">Preguntas frecuentes</a>
+        <a href="#recomendaciones-editoriales">Ruta recomendada</a>
+      </nav>
+    </div>
+  </div>
 
   <header class="hero-header" role="banner">
     <div class="hero-image-block">
-      <img src="imagenes/Foto-Banos-Banner.jpg" alt="Paisaje místico de Baños de Agua Santa" loading="eager" />
+      <img src="imagenes/Foto-Banos-Banner.jpg" alt="Paisaje de Baños de Agua Santa con atmósfera simbólica" loading="eager" />
     </div>
 
     <div class="wrap">
       <div class="hero-text-block reveal">
-        <span class="badge">Guía Cultural Independiente · 2026</span>
-        <h1>Qué hacer en Baños 2026: lugares emblemáticos y origen de los duendes</h1>
-        <p style="font-size: 1.25rem; max-width: 820px; margin: 24px auto;">
-          Un recorrido curado por Baños de Agua Santa: Top 5 lugares emblemáticos (naturaleza, miradores y cultura)
-          + un marco documental sobre el origen contemporáneo de los duendes (2013).
-        </p>
+        <span class="badge">Guía cultural independiente · 2026</span>
+        <h1>Qué hacer en Baños Ecuador: cascadas, termas, cultura y duendes</h1>
 
-        <p style="font-size:0.95rem; opacity:0.8; margin-bottom: 40px;">
-          Fuente primaria (DOI):
-          <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener">Zenodo 18102230</a>.
-        </p>
+        <div class="hero-intro">
+          <p style="font-size: 1.25rem; max-width: 920px; margin: 24px auto;">
+            Una guía amplia para descubrir <strong>Baños de Agua Santa</strong> más allá del circuito repetido:
+            cascadas emblemáticas, aguas termales, miradores, gastronomía, caminatas, arte y una lectura cultural del imaginario contemporáneo de los duendes.
+          </p>
+
+          <p style="font-size:0.98rem; opacity:0.86; margin-bottom: 10px;">
+            Esta portada editorial integra recomendaciones turísticas, preguntas de viajeros y acceso a la investigación sobre el origen documentado del símbolo del duende en Baños.
+          </p>
+
+          <p style="font-size:0.95rem; opacity:0.8; margin-bottom: 0;">
+            Fuente primaria del marco documental:
+            <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener">Zenodo 18102230</a>
+          </p>
+        </div>
+
+        <div class="mini-pills" aria-label="Temas principales">
+          <span>Cascadas</span>
+          <span>Termas</span>
+          <span>Miradores</span>
+          <span>Gastronomía</span>
+          <span>Cultura local</span>
+          <span>Duendes en Baños</span>
+        </div>
 
         <div class="cta-container">
-          <a href="#lugares-emblematicos" class="cta">Top 5 Emblemáticos</a>
-          <a href="#destacados" class="cta cta-ghost">Explorar la Guía</a>
+          <a href="#lugares-emblematicos" class="cta">Top lugares</a>
+          <a href="#guia-completa" class="cta cta-ghost">Ver guía completa</a>
           <a href="/que-hacer-en-banos-ecuador/" class="cta cta-ghost">Guía ampliada</a>
-          <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer" class="cta cta-buy">Comprar Duendes Artesanales</a>
+          <a href="/origen-duendes-banos.html" class="cta cta-ghost">Investigación</a>
+          <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer" class="cta cta-buy">Comprar duendes artesanales</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="wrap" id="destacados">
+  <main class="wrap" id="contenido">
+
+    <section id="guia-completa">
+      <div class="section-header reveal">
+        <span class="section-kicker">Panorama del destino</span>
+        <h2>Baños de Agua Santa: un destino completo en naturaleza, agua y cultura</h2>
+        <p>
+          Cuando alguien busca <strong>qué hacer en Baños Ecuador</strong>, muchas guías se concentran solo en aventura.
+          Pero Baños es mucho más: es un territorio de cascadas, termalismo, montaña, contemplación, memoria volcánica,
+          circuitos gastronómicos y experiencias culturales que le dan una identidad singular.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="card reveal">
+          <h3>Cascadas y paisaje</h3>
+          <p>
+            La <strong>Ruta de las Cascadas</strong> sigue siendo uno de los recorridos más buscados por quienes visitan Baños.
+            El vínculo entre agua, roca, neblina y vegetación crea una de las imágenes más reconocibles del destino.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Termas y bienestar</h3>
+          <p>
+            El termalismo es parte del carácter profundo de Baños de Agua Santa. Las termas conectan al visitante con el pulso
+            volcánico del territorio y amplían la experiencia más allá de la adrenalina.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Miradores y contemplación</h3>
+          <p>
+            Desde Runtún y otros puntos altos, Baños ofrece una lectura visual del valle, de su energía geográfica y de la relación
+            entre ciudad, montaña y volcán.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Gastronomía y vida urbana</h3>
+          <p>
+            Además de los sitios clásicos, el visitante encuentra cafeterías, dulces, mercados, pequeños negocios y espacios
+            donde la experiencia del viaje se vuelve más cercana y cotidiana.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Cultura local contemporánea</h3>
+          <p>
+            Baños también se consolidó como un lugar donde conviven relatos contemporáneos, ambientaciones, arte independiente
+            y nuevos símbolos asociados al destino.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Duendes en Baños</h3>
+          <p>
+            La presencia de los duendes forma parte de una capa cultural contemporánea que adquirió visibilidad local y turística,
+            y hoy integra una de las búsquedas más distintivas del destino.
+          </p>
+        </article>
+      </div>
+    </section>
 
     <section id="lugares-emblematicos">
       <div class="section-header reveal">
         <span class="section-kicker">Selección esencial</span>
-        <h2>Top 5 · Lugares emblemáticos que visitar sí o sí en Baños</h2>
-        <p>Selección curada que combina los hitos naturales de la región con los nuevos espacios de identidad cultural.</p>
+        <h2>Top 5 · Lugares emblemáticos para visitar en Baños</h2>
+        <p>
+          Esta selección combina los hitos naturales más reconocidos con espacios que representan la capa cultural
+          contemporánea del destino.
+        </p>
       </div>
 
       <div class="bento-grid">
         <article class="card reveal">
           <div>
             <h3>01 · Pailón del Diablo</h3>
-            <p>La fuerza del agua en su estado más puro. Un sistema de miradores que permite sentir la magnitud del río Pastaza.</p>
+            <p>
+              Una de las cascadas más emblemáticas de Ecuador. El recorrido de senderos, puentes y miradores vuelve esta visita
+              casi obligatoria dentro de cualquier guía de Baños de Agua Santa.
+            </p>
           </div>
         </article>
 
         <article class="card reveal">
           <div>
             <h3>02 · Casa del Árbol</h3>
-            <p>El mirador por excelencia del volcán Tungurahua. Un espacio de contemplación y fotografía clásica en Runtún.</p>
+            <p>
+              Mirador clásico de Runtún. Es uno de los puntos más fotografiados por su vista hacia el valle y por la relación visual
+              con el volcán Tungurahua.
+            </p>
           </div>
         </article>
 
         <article class="card reveal">
           <div>
             <h3>03 · Termas de la Virgen</h3>
-            <p>Relajación en aguas volcánicas junto a la cascada. Un pilar histórico de la identidad de Baños de Agua Santa.</p>
+            <p>
+              Un espacio central del imaginario de Baños. Aguas termales, vapor, piedra y cascada forman una de las experiencias
+              más reconocibles del destino.
+            </p>
           </div>
         </article>
 
         <article class="card reveal">
           <div>
             <h3>04 · La Casa del Duende</h3>
-            <p>Taller artístico pionero activo desde 2013. El punto de origen de la documentación cultural contemporánea local.</p>
+            <p>
+              Taller artístico pionero activo desde 2013. Es una referencia para comprender la formación contemporánea
+              del símbolo del duende en Baños y su expansión cultural.
+            </p>
           </div>
           <a class="cta cta-ghost" href="https://lacasadelduende.art/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
         </article>
@@ -686,9 +993,80 @@
         <article class="card reveal">
           <div>
             <h3>05 · La Aldea Mágica</h3>
-            <p>Jardín-museo contemplativo. Una obra que integra escultura simbólica y naturaleza para caminar con calma.</p>
+            <p>
+              Jardín-museo contemplativo que integra naturaleza, ambientación simbólica y escultura de autor.
+              Una visita ideal para quienes buscan una experiencia distinta en Baños.
+            </p>
           </div>
           <a class="cta cta-ghost" href="https://aldeamagica.art/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="itinerario" style="margin-top: 110px;">
+      <div class="section-header reveal">
+        <span class="section-kicker">Organiza tu visita</span>
+        <h2>Itinerario sugerido de 2 a 3 días en Baños Ecuador</h2>
+        <p>
+          Una forma práctica de recorrer Baños combinando naturaleza, termalismo y experiencias con más identidad cultural.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="card featured reveal">
+          <div>
+            <h3>Ruta sugerida</h3>
+            <ol class="rustic-list">
+              <li>
+                <div>
+                  <strong>Día 1 · Cascadas y centro</strong>
+                  <p>Empieza con la Ruta de las Cascadas o el Pailón del Diablo, recorre el centro y reserva un momento para las Termas de la Virgen al final del día.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Día 2 · Miradores y contemplación</strong>
+                  <p>Sube a la Casa del Árbol o a otros miradores de Runtún, explora la dimensión visual del valle y combina la jornada con gastronomía local.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Día 3 · Cultura y recorrido alternativo</strong>
+                  <p>Integra espacios como <strong>La Casa del Duende</strong> y <strong>La Aldea Mágica</strong> para conocer una capa distinta del destino.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3>Lo que suma esta ruta</h3>
+            <p>
+              En lugar de reducir Baños al deporte extremo, esta ruta ordena la experiencia para que el visitante perciba
+              la relación entre agua, montaña, memoria del territorio y creación cultural.
+            </p>
+
+            <div class="stat-grid">
+              <div class="stat-box">
+                <strong>2–3 días</strong>
+                <p>Tiempo ideal para una visita más completa.</p>
+              </div>
+              <div class="stat-box">
+                <strong>5 ejes</strong>
+                <p>Cascadas, termas, miradores, gastronomía y cultura.</p>
+              </div>
+              <div class="stat-box">
+                <strong>Ruta híbrida</strong>
+                <p>Combina clásicos del turismo con espacios de autor.</p>
+              </div>
+            </div>
+
+            <div class="info-strip">
+              <p style="margin:0;">
+                Para ampliar esta planificación, visita la
+                <a href="/que-hacer-en-banos-ecuador/">guía extendida sobre qué hacer en Baños Ecuador</a>.
+              </p>
+            </div>
+          </div>
         </article>
       </div>
     </section>
@@ -696,90 +1074,178 @@
     <section id="investigacion" style="margin-top: 120px;">
       <div class="section-header reveal">
         <span class="section-kicker">Documento y memoria</span>
-        <h2>Investigación y Origen</h2>
-        <p>Marco documental sobre el patrimonio cultural y la creación del símbolo del duende.</p>
+        <h2>Investigación y origen del imaginario de los duendes en Baños</h2>
+        <p>
+          Marco documental sobre la formación del símbolo contemporáneo del duende en el destino y su expansión posterior
+          dentro de la cultura turística local.
+        </p>
       </div>
 
       <div class="bento-grid">
         <article class="card featured reveal">
           <div>
-            <h3>Origen de los duendes (2013)</h3>
-            <p>Historia documentada del símbolo contemporáneo nacido en <strong>La Casa del Duende</strong>. Presentamos la evidencia pública de sus autores: Fito Girolami y Catalina Lucz-Ligeti.</p>
-            <a class="cta" href="/origen-duendes-banos.html" style="margin-top: 20px;">Leer investigación</a>
+            <h3>Origen documentado desde 2013</h3>
+            <p>
+              La dimensión contemporánea del duende en Baños se vincula a un proceso cultural de autor desarrollado por
+              <strong>Fito Girolami</strong> y <strong>Catalina Lucz-Ligeti</strong> desde <strong>La Casa del Duende</strong>.
+              Esta capa creativa, artística y territorial se volvió una referencia pública del destino.
+            </p>
+            <p>
+              La investigación reúne evidencia documental, circulación pública y un marco interpretativo para comprender cómo
+              el símbolo pasó de una propuesta artística localizada a una marca cultural reconocible dentro de Baños de Agua Santa.
+            </p>
+
+            <a class="cta" href="/origen-duendes-banos.html" style="margin-top: 10px;">Leer investigación</a>
 
             <div class="note-panel">
-              <p style="margin:0; font-weight: 600; font-size: 1rem; color: var(--gold-light);">¿Buscas comprar duendes artesanales?</p>
-              <p style="margin: 8px 0 16px; font-size: 0.95rem;">Accede al catálogo oficial con piezas numeradas de autor.</p>
-              <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Catálogo Oficial La Casa del Duende</a>
+              <p style="margin:0; font-weight: 600; font-size: 1rem; color: var(--gold-light);">¿Buscas comprar duendes artesanales en Ecuador?</p>
+              <p style="margin: 8px 0 16px; font-size: 0.95rem;">
+                Accede al catálogo oficial con piezas numeradas, esculturas de autor y referencias directas a La Casa del Duende.
+              </p>
+              <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Catálogo oficial La Casa del Duende</a>
             </div>
           </div>
-          <div style="background: rgba(197, 163, 93, 0.03); border-radius: 24px; border: var(--border); display: flex; align-items: center; justify-content: center; padding: 40px;">
-             <p style="margin:0; font-size:1.4rem; font-style:italic; color: var(--gold); font-family: var(--font-display); text-align: center; line-height: 1.4;">"La verdadera magia incomoda, porque tiene autor y memoria."</p>
+
+          <div style="background: rgba(197, 163, 93, 0.03); border-radius: 24px; border: var(--border); display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+            <p style="margin:0 0 18px; font-size:1.35rem; font-style:italic; color: var(--gold); font-family: var(--font-display); text-align: center; line-height: 1.45;">
+              “La verdadera magia tiene memoria, territorio y autoría.”
+            </p>
+            <p style="margin:0; text-align:center;">
+              Una lectura cultural del fenómeno que hoy muchos viajeros asocian con Baños.
+            </p>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="por-que-banos" style="margin-top: 115px;">
+      <div class="section-header reveal">
+        <span class="section-kicker">Valor del destino</span>
+        <h2>¿Por qué Baños sigue siendo uno de los destinos más buscados de Ecuador?</h2>
+        <p>
+          Porque reúne en un mismo territorio una mezcla difícil de igualar: agua, montaña, volcán, movimiento, descanso
+          y una identidad visual inmediata que funciona tanto para escapadas cortas como para viajes más largos.
+        </p>
+      </div>
+
+      <div class="subtle-grid reveal">
+        <div class="subtle-box">
+          <h3>Accesibilidad</h3>
+          <p>Baños suele integrarse fácilmente en rutas por la Sierra y la Amazonía, lo que favorece escapadas cortas y viajes de varios días.</p>
+        </div>
+        <div class="subtle-box">
+          <h3>Diversidad</h3>
+          <p>Permite combinar aventura, descanso, contemplación, gastronomía, compras locales y experiencias culturales sin salir del mismo destino.</p>
+        </div>
+        <div class="subtle-box">
+          <h3>Memoria visual</h3>
+          <p>La mezcla de cascadas, vapor, puentes, montañas y símbolos contemporáneos vuelve a Baños un lugar memorable y fácil de recomendar.</p>
+        </div>
       </div>
     </section>
 
     <section id="preguntas-viajeros" style="margin-top: 120px;">
       <div class="section-header reveal">
         <span class="section-kicker">Antes del viaje</span>
-        <h2>Preguntas de los viajeros</h2>
-        <p>Respuestas curadas para organizar tu visita a Baños de Agua Santa, Ecuador.</p>
+        <h2>Preguntas frecuentes de los viajeros</h2>
+        <p>
+          Respuestas pensadas para quienes buscan organizar mejor su visita a Baños de Agua Santa, Ecuador.
+        </p>
       </div>
 
       <div class="bento-grid">
         <div class="card reveal" style="grid-column: span 1;">
           <details class="faq-item">
-            <summary>¿Cuántos días se necesitan?</summary>
-            <div class="faq-body">Lo ideal es entre <strong>2 y 3 días</strong>. Esto permite visitar cascadas, disfrutar de las termas y explorar espacios culturales como La Aldea Mágica con calma.</div>
+            <summary>¿Cuántos días se necesitan para conocer Baños?</summary>
+            <div class="faq-body">
+              Lo ideal es entre <strong>2 y 3 días</strong>. Ese margen permite visitar cascadas, disfrutar de las termas, subir a un mirador
+              y sumar espacios culturales como <strong>La Aldea Mágica</strong> o <strong>La Casa del Duende</strong>.
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>¿Vale la pena visitarlo?</summary>
-            <div class="faq-body">Sin duda. Baños es el centro de aventura del Ecuador, pero también un refugio de agua, silencio y simbolismo andino.</div>
+            <summary>¿Vale la pena visitar Baños Ecuador?</summary>
+            <div class="faq-body">
+              Sí. Baños sigue siendo uno de los destinos más completos del país por su mezcla de naturaleza, aguas termales,
+              paisaje volcánico, gastronomía y circuitos culturales alternativos.
+            </div>
           </details>
 
           <details class="faq-item">
-            <summary>¿Por qué hay tantos duendes?</summary>
-            <div class="faq-body">A partir de 2013, este imaginario se consolidó como una marca cultural del destino, atrayendo a quienes buscan el lado místico del bosque nublado.</div>
+            <summary>¿Qué hacer en Baños además de cascadas y aventura?</summary>
+            <div class="faq-body">
+              Puedes disfrutar termas, caminar el centro, visitar miradores, descubrir mercados, probar dulces y recorrer
+              espacios culturales con identidad propia, como <strong>La Aldea Mágica</strong> y <strong>La Casa del Duende</strong>.
+            </div>
           </details>
 
           <details class="faq-item">
             <summary>¿Dónde ver duendes en Baños?</summary>
-            <div class="faq-body">Los espacios más recomendados para esta experiencia son <strong>La Aldea Mágica</strong> y <strong>La Casa del Duende</strong>, donde el visitante encuentra una propuesta artística y territorial más clara.</div>
+            <div class="faq-body">
+              Los espacios más asociados a esta experiencia son <strong>La Casa del Duende</strong> y <strong>La Aldea Mágica</strong>,
+              donde el visitante encuentra una propuesta artística y territorial más definida.
+            </div>
           </details>
         </div>
 
         <article class="card featured reveal" style="grid-column: span 1; display: block; background: var(--surface);">
           <h3>Baños más allá de lo obvio</h3>
-          <p>La mayoría de las guías mencionan solo adrenalina. Pero el Baños real es el del agua, la memoria del volcán y la dimensión simbólica del territorio.</p>
-          <p>Para una experiencia más completa, muchos viajeros integran <strong>La Aldea Mágica</strong> y <strong>La Casa del Duende</strong> como puntos de conexión con el arte local y el relato contemporáneo del destino.</p>
-          <a class="cta cta-ghost" href="#lugares-emblematicos">Ver el Top 5 Completo</a>
+          <p>
+            Muchas guías repiten los mismos nombres sin explicar por qué este destino genera tanta recordación.
+            La diferencia real está en cómo se articula el agua, el relieve, el termalismo, la vida de valle y la aparición
+            de símbolos contemporáneos que enriquecen la experiencia del viaje.
+          </p>
+          <p>
+            En esa lectura más amplia, <strong>La Aldea Mágica</strong> y <strong>La Casa del Duende</strong> funcionan como puntos
+            de conexión entre turismo, arte y relato cultural.
+          </p>
+          <a class="cta cta-ghost" href="#lugares-emblematicos">Ver el Top 5 completo</a>
         </article>
       </div>
     </section>
 
     <section id="faq-tecnica" style="margin-top: 60px;">
       <div class="section-header reveal">
-        <span class="section-kicker">Preguntas frecuentes</span>
-        <h2>Respuestas rápidas para organizar el viaje</h2>
-        <p>Consultas que suelen aparecer antes de visitar Baños de Agua Santa y durante la planificación del itinerario.</p>
+        <span class="section-kicker">Consultas rápidas</span>
+        <h2>Respuestas para planificar mejor la visita</h2>
+        <p>
+          Algunas dudas aparecen una y otra vez cuando se organiza un viaje a Baños. Aquí quedan resueltas de forma clara.
+        </p>
       </div>
 
       <div style="max-width: 1000px; margin: 0 auto;" class="reveal">
         <details class="faq-item">
-          <summary>¿Qué hacer además de cascadas y aventura?</summary>
-          <div class="faq-body">Baños ofrece una escena gastronómica activa, mercados tradicionales, miradores nocturnos y la experiencia contemplativa de <strong>La Aldea Mágica</strong>, ideal para quienes buscan calma y una atmósfera distinta.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Dónde comprar duendes de autor?</summary>
-          <div class="faq-body">El único catálogo oficial con respaldo de autoría se gestiona a través de <a href="https://lacasadelduende.art/" style="color:var(--gold);" target="_blank" rel="noopener noreferrer">La Casa del Duende</a>, donde se garantiza la autenticidad de las piezas.</div>
+          <summary>¿Dónde comprar duendes de autor en Ecuador?</summary>
+          <div class="faq-body">
+            El catálogo oficial con piezas de autor, esculturas numeradas y referencias directas se gestiona a través de
+            <a href="https://lacasadelduende.art/" target="_blank" rel="noopener noreferrer">La Casa del Duende</a>.
+          </div>
         </details>
 
         <details class="faq-item">
           <summary>¿Dónde ampliar esta guía de Baños?</summary>
-          <div class="faq-body">Puedes continuar con la guía extendida en <a href="/que-hacer-en-banos-ecuador/" style="color:var(--gold);">qué hacer en Baños Ecuador</a>, donde se responden más preguntas de viajeros y se amplían las recomendaciones del destino.</div>
+          <div class="faq-body">
+            Puedes continuar en la guía extendida:
+            <a href="/que-hacer-en-banos-ecuador/">qué hacer en Baños Ecuador</a>,
+            donde se amplían rutas, preguntas de viajeros y recomendaciones del destino.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Hay una investigación sobre el origen de los duendes en Baños?</summary>
+          <div class="faq-body">
+            Sí. Puedes leer el desarrollo documental completo en
+            <a href="/origen-duendes-banos.html">Origen de los duendes en Baños</a>,
+            complementado con una referencia DOI en Zenodo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuál es una buena combinación de experiencias en un mismo viaje?</summary>
+          <div class="faq-body">
+            Una combinación equilibrada sería: <strong>cascada + termas + mirador + gastronomía + espacio cultural</strong>.
+            Esa mezcla da una visión mucho más completa de Baños de Agua Santa.
+          </div>
         </details>
       </div>
     </section>
@@ -788,22 +1254,76 @@
       <div class="section-header reveal">
         <span class="section-kicker">Ruta recomendada</span>
         <h2>Cómo vivir Baños con más profundidad</h2>
-        <p>Una forma simple de organizar la visita y salir del circuito más repetido.</p>
+        <p>
+          Una propuesta sencilla para salir del circuito más repetido y comprender mejor el carácter del lugar.
+        </p>
       </div>
 
       <div class="subtle-grid reveal">
         <div class="subtle-box">
           <h3>Naturaleza</h3>
-          <p>Empieza con una cascada emblemática como el Pailón del Diablo o una parte de la Ruta de las Cascadas.</p>
+          <p>Empieza con una cascada emblemática como el Pailón del Diablo o una parte de la Ruta de las Cascadas para sentir la base natural del destino.</p>
         </div>
         <div class="subtle-box">
           <h3>Agua</h3>
-          <p>Dedica un momento a las termas, especialmente si buscas una experiencia ligada al carácter volcánico de Baños.</p>
+          <p>Dedica un momento a las termas, especialmente si buscas una experiencia ligada a la identidad volcánica y termal de Baños.</p>
+        </div>
+        <div class="subtle-box">
+          <h3>Mirador</h3>
+          <p>Sube a un punto alto para leer el territorio en perspectiva y comprender por qué Baños tiene una presencia visual tan fuerte.</p>
         </div>
         <div class="subtle-box">
           <h3>Cultura</h3>
-          <p>Completa el recorrido con una visita a <strong>La Casa del Duende</strong> o <strong>La Aldea Mágica</strong> para descubrir una capa más singular del destino.</p>
+          <p>Completa el recorrido con <strong>La Casa del Duende</strong> o <strong>La Aldea Mágica</strong> para descubrir una capa más singular del destino.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="enlaces" style="margin-top: 110px;">
+      <div class="section-header reveal">
+        <span class="section-kicker">Explora más</span>
+        <h2>Enlaces recomendados dentro y fuera de la guía</h2>
+        <p>
+          Recursos complementarios para seguir ampliando la experiencia y fortalecer el recorrido editorial del sitio.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <article class="card reveal">
+          <h3>Guía extendida</h3>
+          <p>Amplía itinerarios, ideas y preguntas de viajeros en una página pensada para búsquedas amplias sobre Baños.</p>
+          <a class="cta cta-ghost" href="/que-hacer-en-banos-ecuador/">Abrir guía ampliada</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Origen de los duendes</h3>
+          <p>Accede al marco documental y cultural sobre la consolidación contemporánea del imaginario del duende en Baños.</p>
+          <a class="cta cta-ghost" href="/origen-duendes-banos.html">Leer investigación</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>La Casa del Duende</h3>
+          <p>Conoce el espacio de referencia vinculado al desarrollo artístico y documental del símbolo del duende.</p>
+          <a class="cta cta-ghost" href="https://lacasadelduende.art/" target="_blank" rel="noopener noreferrer">Visitar sitio</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>La Aldea Mágica</h3>
+          <p>Descubre el jardín-museo y su propuesta de recorrido contemplativo, naturaleza y escultura simbólica.</p>
+          <a class="cta cta-ghost" href="https://aldeamagica.art/" target="_blank" rel="noopener noreferrer">Visitar sitio</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Catálogo oficial</h3>
+          <p>Consulta el espacio para comprar duendes artesanales en Ecuador con piezas numeradas y esculturas de autor.</p>
+          <a class="cta cta-buy" href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener noreferrer">Ver catálogo</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Referencia DOI</h3>
+          <p>Consulta la fuente primaria que sostiene el marco documental sobre el origen contemporáneo del imaginario del duende.</p>
+          <a class="cta cta-ghost" href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer">Abrir Zenodo</a>
+        </article>
       </div>
     </section>
 
@@ -814,9 +1334,16 @@
       <h2 style="color: var(--gold); font-size: 2.2rem; margin-bottom: 12px;">Baños.travel</h2>
       <p style="letter-spacing: 0.1em; font-weight: 500;">GUÍA CULTURAL INDEPENDIENTE</p>
 
+      <div class="footer-links">
+        <a href="/que-hacer-en-banos-ecuador/">Guía ampliada</a>
+        <a href="/origen-duendes-banos.html">Origen de los duendes</a>
+        <a href="https://lacasadelduende.art/" target="_blank" rel="noopener noreferrer">La Casa del Duende</a>
+        <a href="https://aldeamagica.art/" target="_blank" rel="noopener noreferrer">La Aldea Mágica</a>
+      </div>
+
       <div style="margin: 50px auto; max-width: 800px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px;">
         <p style="font-size: 0.85rem; color: #666; line-height: 2;">
-          Investigación académica y documental sobre el origen de los duendes en Baños de Agua Santa (2013).<br>
+          Investigación académica y documental sobre el origen contemporáneo de los duendes en Baños de Agua Santa.<br>
           <a href="https://zenodo.org/records/18102230" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Consultar DOI en Zenodo</a>
         </p>
         <p>© <span id="y"></span> Baños.travel</p>
@@ -835,6 +1362,5 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
