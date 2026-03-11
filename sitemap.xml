@@ -7,7 +7,7 @@
   <!-- Home -->
   <url>
     <loc>https://www.banos.travel/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,87 +19,108 @@
   <!-- Guía principal -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-ecuador/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://www.banos.travel/static/og/que-hacer-banos.jpg</image:loc>
       <image:title>Qué hacer en Baños Ecuador</image:title>
     </image:image>
   </url>
 
-  <!-- Qué hacer si llueve -->
+  <!-- Guías satélite de intención turística -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-cuando-llueve/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/cuantos-dias-en-banos/</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
 
-  <!-- Cuántos días en Baños -->
   <url>
-    <loc>https://www.banos.travel/cuantos-dias-en-banos/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://www.banos.travel/banos-mas-alla-de-la-aventura/</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Baños más allá de la aventura -->
   <url>
-    <loc>https://www.banos.travel/banos-mas-alla-de-la-aventura/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.84</priority>
-  </url>
-
-  <!-- Qué son los duendes en Baños -->
-  <url>
-    <loc>https://www.banos.travel/que-son-los-duendes-en-banos/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.89</priority>
-  </url>
-
-  <!-- Duendes en Baños -->
-  <url>
-    <loc>https://www.banos.travel/duendes-en-banos-ecuador/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://www.banos.travel/cascadas-de-banos-ecuador/</loc>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
 
-  <!-- La Aldea Mágica -->
   <url>
-    <loc>https://www.banos.travel/aldea-magica-banos/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.83</priority>
-  </url>
-
-  <!-- La Casa del Duende -->
-  <url>
-    <loc>https://www.banos.travel/la-casa-del-duende-banos/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.banos.travel/ruta-de-las-cascadas-banos/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.87</priority>
   </url>
 
-  <!-- Origen de los duendes -->
+  <url>
+    <loc>https://www.banos.travel/termas-de-banos-ecuador/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/casa-del-arbol-banos-ecuador/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Cluster duendes -->
+  <url>
+    <loc>https://www.banos.travel/que-son-los-duendes-en-banos/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/duendes-en-banos-ecuador/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.91</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/la-casa-del-duende-banos/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/aldea-magica-banos/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
   <url>
     <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
-    <lastmod>2025-08-27</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.96</priority>
     <image:image>
       <image:loc>https://www.banos.travel/static/og/origen-duendes.jpg</image:loc>
       <image:title>Origen de los duendes en Baños</image:title>
     </image:image>
   </url>
 
-  <!-- Historias de los duendes -->
   <url>
     <loc>https://www.banos.travel/historias-duendes-banos-ecuador.html</loc>
-    <lastmod>2025-08-27</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -108,10 +129,9 @@
     </image:image>
   </url>
 
-  <!-- Duendes mágicos -->
   <url>
     <loc>https://www.banos.travel/duendes-magicos-ecuador.html</loc>
-    <lastmod>2025-12-04</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <image:image>
@@ -120,12 +140,20 @@
     </image:image>
   </url>
 
-  <!-- Historia cultural -->
+  <!-- Intención comercial / artesanal -->
+  <url>
+    <loc>https://www.banos.travel/comprar-duendes-artesanales-ecuador/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
+
+  <!-- Contexto cultural -->
   <url>
     <loc>https://www.banos.travel/historia-cultural.html</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.78</priority>
   </url>
 
 </urlset>
