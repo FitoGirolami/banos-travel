@@ -7,7 +7,7 @@
   <!-- Home -->
   <url>
     <loc>https://www.banos.travel/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,7 +19,7 @@
   <!-- Guía principal -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -28,52 +28,81 @@
     </image:image>
   </url>
 
-  <!-- Guías satélite de intención turística -->
+  <!--  Alta intención -->
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-semana-santa/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-feriados/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/que-hacer-en-banos-fin-de-semana/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.91</priority>
+  </url>
+
+  <url>
+    <loc>https://www.banos.travel/lugares-imperdibles-banos-ecuador/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+
+  <!-- Guías satélite -->
   <url>
     <loc>https://www.banos.travel/que-hacer-en-banos-cuando-llueve/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/cuantos-dias-en-banos/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/banos-mas-alla-de-la-aventura/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/cascadas-de-banos-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/ruta-de-las-cascadas-banos/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/termas-de-banos-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/casa-del-arbol-banos-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
@@ -81,35 +110,35 @@
   <!-- Cluster duendes -->
   <url>
     <loc>https://www.banos.travel/que-son-los-duendes-en-banos/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.89</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/duendes-en-banos-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.91</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/la-casa-del-duende-banos/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/aldea-magica-banos/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
 
   <url>
     <loc>https://www.banos.travel/origen-duendes-banos.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.96</priority>
     <image:image>
@@ -120,7 +149,7 @@
 
   <url>
     <loc>https://www.banos.travel/historias-duendes-banos-ecuador.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -131,7 +160,7 @@
 
   <url>
     <loc>https://www.banos.travel/duendes-magicos-ecuador.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <image:image>
@@ -140,14 +169,23 @@
     </image:image>
   </url>
 
-  <!-- Intención comercial / artesanal -->
+  <!-- Comercial -->
   <url>
     <loc>https://www.banos.travel/comprar-duendes-artesanales-ecuador/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
 
+  <!-- Cultural -->
+  <url>
+    <loc>https://www.banos.travel/historia-cultural.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+</urlset>
   <!-- Contexto cultural -->
   <url>
     <loc>https://www.banos.travel/historia-cultural.html</loc>
