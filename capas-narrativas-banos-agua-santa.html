@@ -1,0 +1,390 @@
+<!-- SECCIÓN: Capas Narrativas de Baños de Agua Santa -->
+<section id="capas-narrativas-banos" class="bt-capas-section" aria-labelledby="bt-capas-title">
+  <style>
+    .bt-capas-section {
+      --bt-bg: #0f1713;
+      --bt-card: #17231c;
+      --bt-card-2: #203226;
+      --bt-gold: #d7b66a;
+      --bt-ivory: #f4ead2;
+      --bt-text: #e8e1d2;
+      --bt-muted: #b9ad97;
+      --bt-green: #6f8f68;
+      --bt-line: rgba(215, 182, 106, 0.28);
+
+      background:
+        radial-gradient(circle at top left, rgba(215, 182, 106, 0.12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(111, 143, 104, 0.16), transparent 38%),
+        var(--bt-bg);
+      color: var(--bt-text);
+      padding: 64px 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .bt-capas-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .bt-capas-kicker {
+      color: var(--bt-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .bt-capas-title {
+      color: var(--bt-ivory);
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      font-weight: 800;
+      max-width: 940px;
+    }
+
+    .bt-capas-lead {
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.7;
+      color: var(--bt-text);
+      max-width: 860px;
+      margin: 0 0 34px;
+    }
+
+    .bt-capas-highlight {
+      border-left: 4px solid var(--bt-gold);
+      background: rgba(215, 182, 106, 0.08);
+      padding: 18px 20px;
+      border-radius: 14px;
+      margin: 28px 0 38px;
+      color: var(--bt-ivory);
+      line-height: 1.65;
+      font-size: 1.04rem;
+    }
+
+    .bt-capas-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      margin: 34px 0 44px;
+    }
+
+    .bt-capa-card {
+      background: linear-gradient(180deg, var(--bt-card), var(--bt-card-2));
+      border: 1px solid var(--bt-line);
+      border-radius: 22px;
+      padding: 20px;
+      min-height: 260px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bt-capa-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(215, 182, 106, 0.12), transparent 42%);
+      pointer-events: none;
+    }
+
+    .bt-capa-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(215, 182, 106, 0.14);
+      color: var(--bt-gold);
+      border: 1px solid var(--bt-line);
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bt-capa-card h3 {
+      color: var(--bt-ivory);
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.25;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bt-capa-card p {
+      color: var(--bt-muted);
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.58;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bt-capas-duendes {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
+      margin: 42px 0;
+    }
+
+    .bt-capas-box {
+      background: rgba(244, 234, 210, 0.06);
+      border: 1px solid var(--bt-line);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .bt-capas-box h3 {
+      color: var(--bt-gold);
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.45rem;
+    }
+
+    .bt-capas-box p {
+      line-height: 1.72;
+      color: var(--bt-text);
+      margin: 0 0 14px;
+    }
+
+    .bt-capas-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .bt-capas-list li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(111, 143, 104, 0.14);
+      border: 1px solid rgba(111, 143, 104, 0.24);
+      color: var(--bt-text);
+      line-height: 1.5;
+    }
+
+    .bt-capas-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    .bt-capas-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 750;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .bt-capas-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .bt-capas-btn-primary {
+      background: var(--bt-gold);
+      color: #16120a;
+    }
+
+    .bt-capas-btn-secondary {
+      border: 1px solid var(--bt-line);
+      color: var(--bt-ivory);
+      background: rgba(244, 234, 210, 0.04);
+    }
+
+    .bt-capas-note {
+      color: var(--bt-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 780px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 980px) {
+      .bt-capas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bt-capas-duendes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .bt-capas-section {
+        padding: 48px 16px;
+      }
+
+      .bt-capas-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bt-capa-card {
+        min-height: auto;
+      }
+    }
+  </style>
+
+  <div class="bt-capas-wrap">
+    <div class="bt-capas-kicker">Leyendas, patrimonio y territorio</div>
+
+    <h2 id="bt-capas-title" class="bt-capas-title">
+      Las capas narrativas de Baños de Agua Santa
+    </h2>
+
+    <p class="bt-capas-lead">
+      Baños de Agua Santa no se entiende desde una sola historia. Su identidad cultural está formada
+      por capas: oralidad profunda, devoción religiosa, relatos de cuidado comunitario, creación autoral
+      contemporánea y turismo reciente. Separarlas permite leer el territorio con más claridad y cuidar
+      mejor su patrimonio narrativo.
+    </p>
+
+    <div class="bt-capas-highlight">
+      <strong>No todas las narrativas de Baños pertenecen al mismo tiempo histórico.</strong>
+      Algunas nacen de la oralidad profunda, otras de la devoción religiosa, otras del control social
+      comunitario, otras del arte contemporáneo y otras del turismo reciente. Cada capa tiene su propio
+      origen, función y valor cultural.
+    </div>
+
+    <div class="bt-capas-grid" aria-label="Cinco capas narrativas de Baños de Agua Santa">
+      <article class="bt-capa-card">
+        <div class="bt-capa-number">1</div>
+        <h3>Oralidad profunda</h3>
+        <p>
+          Relatos vinculados al monte, la selva, el volcán, los ríos y los caminos antiguos.
+          Aquí aparecen figuras como el Sacha Runa y las Voces del Tungurahua.
+        </p>
+      </article>
+
+      <article class="bt-capa-card">
+        <div class="bt-capa-number">2</div>
+        <h3>Devoción religiosa</h3>
+        <p>
+          Narrativas de fe, protección y sacralización del paisaje. La Virgen de Agua Santa,
+          la Basílica, las peregrinaciones y las cruces forman parte de esta capa.
+        </p>
+      </article>
+
+      <article class="bt-capa-card">
+        <div class="bt-capa-number">3</div>
+        <h3>Control social comunitario</h3>
+        <p>
+          Leyendas que enseñaban prudencia, regulaban horarios, marcaban límites y advertían
+          sobre peligros. La Voladora de Illuchi y La Caja Ronca son ejemplos centrales.
+        </p>
+      </article>
+
+      <article class="bt-capa-card">
+        <div class="bt-capa-number">4</div>
+        <h3>Creación autoral contemporánea</h3>
+        <p>
+          Obras y símbolos con autores, fechas y documentación. Aquí se ubican La Casa del Duende,
+          fundada en 2013, La Aldea Mágica y el Duendismo Cultural.
+        </p>
+      </article>
+
+      <article class="bt-capa-card">
+        <div class="bt-capa-number">5</div>
+        <h3>Turismo reciente</h3>
+        <p>
+          Rutas, relatos, decorados y experiencias creadas o amplificadas por la actividad turística
+          contemporánea. Esta capa comunica, resignifica y transforma símbolos del territorio.
+        </p>
+      </article>
+    </div>
+
+    <div class="bt-capas-duendes">
+      <div class="bt-capas-box">
+        <h3>El fenómeno contemporáneo de los duendes en Baños</h3>
+        <p>
+          Para comprender los duendes en Baños de Agua Santa es necesario distinguir sus capas.
+          En Ecuador existen figuras folklóricas llamadas duendes o relacionadas con duendes, pero
+          la presencia visual contemporánea del duende en Baños tiene un origen documentado en
+          <strong>La Casa del Duende</strong>, fundada en 2013 por Fito Girolami y Catalina Lucz-Ligeti.
+        </p>
+        <p>
+          Desde ese origen autoral, el duende comenzó a tomar forma como símbolo artístico,
+          cultural y territorial. En 2018, <strong>La Aldea Mágica</strong> expandió ese universo hacia
+          una experiencia inmersiva de arte, naturaleza y contemplación.
+        </p>
+      </div>
+
+      <div class="bt-capas-box">
+        <h3>Cuatro niveles para no confundir</h3>
+        <ul class="bt-capas-list">
+          <li><strong>Duende folklórico:</strong> figura variable dentro del imaginario popular ecuatoriano y regional.</li>
+          <li><strong>La Casa del Duende:</strong> creación artística autoral documentada desde 2013.</li>
+          <li><strong>Duendismo Cultural:</strong> marco simbólico, artístico y territorial contemporáneo.</li>
+          <li><strong>Turismo posterior:</strong> copias, usos comerciales y narrativas recientes que resignifican el símbolo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bt-capas-highlight">
+      Las leyendas de Baños no son simples adornos turísticos: son formas de memoria. La devoción
+      protege y reúne, el miedo enseña prudencia, el arte contemporáneo crea nuevos símbolos y el
+      turismo reciente comunica y transforma. Nombrar cada capa con precisión permite cuidar mejor
+      la historia cultural del territorio.
+    </div>
+
+    <div class="bt-capas-cta">
+      <a class="bt-capas-btn bt-capas-btn-primary" href="/capas-narrativas-banos-agua-santa.html">
+        Leer la guía completa
+      </a>
+
+      <a class="bt-capas-btn bt-capas-btn-secondary" href="/origen-duendes-banos.html">
+        Origen de los duendes en Baños
+      </a>
+
+      <a class="bt-capas-btn bt-capas-btn-secondary" href="/historias-duendes-banos-ecuador.html">
+        Historias de los duendes
+      </a>
+    </div>
+
+    <p class="bt-capas-note">
+      Esta lectura forma parte de una línea de investigación cultural sobre leyendas, memoria territorial,
+      Duendismo Cultural y construcción simbólica contemporánea en Baños de Agua Santa.
+    </p>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Las capas narrativas de Baños de Agua Santa",
+    "description": "Baños de Agua Santa explicado por capas narrativas: oralidad profunda, devoción religiosa, leyendas de control social, creación autoral contemporánea, duendes y turismo reciente.",
+    "inLanguage": "es",
+    "about": [
+      "Baños de Agua Santa",
+      "folklore ecuatoriano",
+      "leyendas de Baños",
+      "Duendismo Cultural",
+      "La Casa del Duende",
+      "La Aldea Mágica",
+      "memoria territorial",
+      "patrimonio cultural"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Fito Girolami"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Baños Travel"
+    }
+  }
+  </script>
+</section>
+<!-- FIN SECCIÓN: Capas Narrativas de Baños de Agua Santa -->
